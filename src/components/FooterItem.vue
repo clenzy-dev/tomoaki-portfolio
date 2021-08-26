@@ -6,14 +6,14 @@
         <div><a class="text-2xl" href="#">WORKS</a></div>
         <div><a class="text-2xl" href="#">PROFILE</a></div>
       </div>
-      <div
-        class="link  flex pt-10 justify-end"
-        v-for="item in items"
-        :key="item.title"
-      >
-        <a :class="item.class" href="#"
-          ><img class="w-full" :src="item.src" :alt="item.title"
-        /></a>
+      <div class="flex pt-10 justify-end">
+        <div class="link" v-for="item in items" :key="item.title">
+          <div :class="item.class">
+            <a class="w-auto" href="#"
+              ><img class="w-full" :src="item.src" :alt="item.title"
+            /></a>
+          </div>
+        </div>
       </div>
       <dev class="logo w-4"
         ><img class="w-20" :src="FooterLogo" alt="logo"
@@ -27,31 +27,31 @@ export default {
   name: "FooterItem",
   data() {
     return {
-      FooterLogo: require('../assets/img/tomoaki-logo-wletter-op.png'),
+      FooterLogo: require("../assets/img/tomoaki-logo-wletter-op.png"),
       items: [
         {
           title: "instagram",
           href: "#",
           class: "w-10",
-          src: require('../assets/img/instagram-logo.png'),
+          src: require("../assets/img/instagram-logo.png"),
         },
         {
           title: "twitter",
           href: "#",
           class: "w-10 ml-4 pt-1",
-          src: require('../assets/img/twitter-logo.png'),
+          src: require("../assets/img/twitter-logo.png"),
         },
         {
           title: "facebook",
           href: "#",
           class: "w-10 ml-4",
-          src: require('../assets/img/facebook-logo.png'),
+          src: require("../assets/img/facebook-logo.png"),
         },
         {
           title: "email",
           href: "#",
           class: "w-10 ml-4",
-          src: require('../assets/img/email-logo.png'),
+          src: require("../assets/img/email-logo.png"),
         },
       ],
     };
