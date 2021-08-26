@@ -27,31 +27,31 @@ export default {
   name: "FooterItem",
   data() {
     return {
-      FooterLogo: "tomoaki-logo.png",
+      FooterLogo: require('../assets/img/tomoaki-logo-wletter-op.png'),
       items: [
         {
           title: "instagram",
           href: "#",
           class: "w-10",
-          src: "instagram-logo.png",
+          src: require('../assets/img/instagram-logo.png'),
         },
         {
           title: "twitter",
           href: "#",
           class: "w-10 ml-4 pt-1",
-          src: "twitter-logo.png",
+          src: require('../assets/img/twitter-logo.png'),
         },
         {
           title: "facebook",
           href: "#",
           class: "w-10 ml-4",
-          src: "facebook-logo.png",
+          src: require('../assets/img/facebook-logo.png'),
         },
         {
           title: "email",
           href: "#",
           class: "w-10 ml-4",
-          src: "email-logo.png",
+          src: require('../assets/img/email-logo.png'),
         },
       ],
     };

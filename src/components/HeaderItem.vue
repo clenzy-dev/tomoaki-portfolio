@@ -21,8 +21,8 @@
 export default {
   data() {
     return {
-      headerLogo: "tomoaki-logo.png",
-      headerLetter: "tomoaki-letter.png",
+      headerLogo: require("../assets/img/tomoaki-logo.png") ,
+      headerLetter: require("../assets/img/tomoaki-letter.png"),
     };
   },
   name: "HeaderItem",
