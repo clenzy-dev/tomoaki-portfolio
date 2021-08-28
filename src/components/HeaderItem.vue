@@ -1,15 +1,18 @@
 <template>
-  <header class="px-8 flex justify-between items-center">
-    <div class="header-logo flex ">
+  <header class="sm:px-8 sm:flex sm:justify-between sm:items-center sm:static fixed">
+    <div class="header-logo sm:flex hidden">
       <img class="w-24" :src="headerLogo" alt="logo" />
       <img class="w-24" :src="headerLetter" alt="letter" />
     </div>
+    <div class="sm:hidden">
+          <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
+        </div>
     <nav>
-      <div class="header-menu">
-        <router-link id="works" to="/works" class="pr-8">
+      <div class="space-x-4">
+        <router-link id="works" to="/works" class="sm:inline hidden">
           <span>WORKS</span>
         </router-link>
-        <router-link id="profile" to="/profile">
+        <router-link id="profile" to="/profile" class="sm:inline hidden">
           <span>PROFILE</span>
         </router-link>
       </div>
@@ -21,10 +24,12 @@
 export default {
   data() {
     return {
-      headerLogo: require("../assets/img/tomoaki-logo.png") ,
+      headerLogo: require("../assets/img/tomoaki-logo.png"),
       headerLetter: require("../assets/img/tomoaki-letter.png"),
+      headerLogoSp: require("../assets/img/tomoaki-logo-wletter-op.png"),
     };
   },
   name: "HeaderItem",
 };
 </script>
+
