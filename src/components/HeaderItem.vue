@@ -1,12 +1,15 @@
 <template>
-  <header class="sm:px-8 sm:flex sm:justify-between sm:items-center sm:static fixed">
+  <header
+    class="sm:px-8 sm:flex sm:justify-between sm:items-center sm:static fixed"
+  >
+    <BurgerMenu/>
     <div class="header-logo sm:flex hidden">
       <img class="w-24" :src="headerLogo" alt="logo" />
       <img class="w-24" :src="headerLetter" alt="letter" />
     </div>
     <div class="sm:hidden">
-          <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
-        </div>
+      <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
+    </div>
     <nav>
       <div class="space-x-4">
         <router-link id="works" to="/works" class="sm:inline hidden">
@@ -21,6 +24,7 @@
 </template>
 
 <script>
+import BurgerMenu from "./burger.vue";
 export default {
   data() {
     return {
@@ -29,7 +33,9 @@ export default {
       headerLogoSp: require("../assets/img/tomoaki-logo-wletter-op.png"),
     };
   },
+  components: {
+    BurgerMenu
+  },
   name: "HeaderItem",
 };
 </script>
-
