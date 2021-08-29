@@ -1,15 +1,15 @@
 <template>
   <header
-    class="sm:px-8 sm:flex sm:justify-between sm:items-center sm:static fixed"
+    class="sm:px-8 sm:flex sm:justify-between sm:items-center"
   >
-    <BurgerMenu/>
     <div class="header-logo sm:flex hidden">
       <img class="w-24" :src="headerLogo" alt="logo" />
       <img class="w-24" :src="headerLetter" alt="letter" />
     </div>
-    <div class="sm:hidden">
+    <div class="sm:hidden w-full sm:static fixed">
       <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
     </div>
+    <BurgerMenu/>
     <nav>
       <div class="space-x-4">
         <router-link id="works" to="/works" class="sm:inline hidden">
