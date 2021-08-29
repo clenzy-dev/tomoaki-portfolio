@@ -2,11 +2,12 @@
   <div>
     <HeaderItem />
     <main>
-      <video class="sm:pt-0 pt-16" :src="mainVideo" autoplay muted></video>
-      <div class="sm:px-16 pl-16">
-        <h2 class="text-4xl text-left py-5">WORKS</h2>
+      <video class="hidden sm:block" :src="mainVideo" autoplay muted></video>
+      <video class="sm:hidden pt-16 w-full" :src="mainVideoSp" autoplay muted></video>
+      <div class="sm:px-32 pl-20">
+        <h2 class="text-4xl text-left sm:py-10 py-5">WORKS</h2>
         <div>
-          <div class="sm:grid sm:grid-cols-4 sm:grid-lows-2 gap-8 z-0">
+          <div class="sm:grid sm:grid-cols-4 sm:grid-lows-2 gap-4 z-0">
             <a
               :class="item.class"
               class=" transition duration-250 ease-in-out bg-gray-100 transform hover:scale-105 z-0"
@@ -14,7 +15,7 @@
               v-for="item in items"
               :key="item.id"
             >
-              <div class="p-2 z-0">
+              <div class="sm:p-2">
                 <img class="z-0" :src="item.img" :alt="item.id" />
               </div>
               <div class="sm:flex items-center">
@@ -34,14 +35,14 @@
           >
         </div>
       </div>
-      <div class="sm:px-16 pl-16 pb-32">
-        <h2 class="text-4xl text-left py-5">PROFILE</h2>
+      <div class="sm:px-32 pl-20 pb-32">
+        <h2 class="text-4xl text-left sm:py-10 py-5">PROFILE</h2>
         <div class="sm:flex content-center">
           <div class="sm:w-2/4 sm:mr-0 mr-4">
             <img :src="profileImg" alt="profile" />
           </div>
           <div class="sm:w-2/4 text-center content-center">
-            <p class="sm:text-5xl sm:mt-48 sm:mb-40 text-2xl mt-10 mb-10">
+            <p class="sm:text-5xl sm:mt-48 sm:mb-40 text-2xl mt-2 mb-4 sm:text-center text-left">
               Tomoaki Sato
             </p>
             <div class="flex justify-end pr-4">
@@ -66,6 +67,7 @@ export default {
   data() {
     return {
       mainVideo: require("../assets/img/LogoMovieWideScreen01.mp4"),
+      mainVideoSp: require("../assets/img/LogoMovieSquare02.mp4"),
       profileImg: require("../assets/img/tomoaki-plofile.jpg"),
       items: [
         {

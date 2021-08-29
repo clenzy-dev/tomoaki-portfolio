@@ -1,13 +1,13 @@
 <template>
   <footer class="sm:bg-gray-100">
-    <div class="sm:px-32 pr-4">
+    <div class="sm:pl-8 sm:pr-32 pr-4">
       <div class="sm:text-right sm:pl-0 pl-16 pt-4 space-y-4">
         <div><a class="text-2xl" href="#">TOP</a></div>
         <div><a class="text-2xl" href="#">WORKS</a></div>
         <div><a class="text-2xl" href="#">PROFILE</a></div>
       </div>
       <div
-        class="flex pt-10 pl-16 sm:pl-0 sm:justify-end justify-start space-x-6"
+        class="flex pt-10 pl-16 sm:pl-0 sm:justify-end justify-start space-x-2"
       >
         <div class="link sm:pb-0 pb-4" v-for="item in items" :key="item.title">
           <div :class="item.class">
