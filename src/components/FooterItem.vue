@@ -1,15 +1,15 @@
 <template>
-  <footer class="sm:bg-gray-100">
-    <div class="sm:pl-8 sm:pr-32 pr-4">
-      <div class="sm:text-right sm:pl-0 pl-16 pt-4 space-y-4">
+  <footer class="md:bg-gray-100">
+    <div class="md:pl-8 md:pr-32 pr-4">
+      <div class="md:text-right md:pl-0 pl-16 pt-4 space-y-4">
         <div><a class="text-2xl" href="#">TOP</a></div>
         <div><a class="text-2xl" href="#">WORKS</a></div>
         <div><a class="text-2xl" href="#">PROFILE</a></div>
       </div>
       <div
-        class="flex pt-10 pl-16 sm:pl-0 sm:justify-end justify-start space-x-2"
+        class="flex pt-10 pl-16 md:pl-0 md:justify-end justify-start space-x-2"
       >
-        <div class="link sm:pb-0 pb-4" v-for="item in items" :key="item.title">
+        <div class="link md:pb-0 pb-4" v-for="item in items" :key="item.title">
           <div :class="item.class">
             <a class="w-auto" href="#"
               ><img class="w-full" :src="item.src" :alt="item.title"
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div>
-        <a class="w-4 sm:inline hidden" href="#"
+        <a class="w-4 md:inline hidden" href="#"
           ><img class="w-20" :src="FooterLogo" alt="logo"
         /></a>
       </div>

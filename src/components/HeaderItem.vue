@@ -1,21 +1,21 @@
 <template>
   <header
-    class="sm:px-8 sm:flex sm:justify-between sm:items-center"
+    class="md:px-8 md:flex md:justify-between md:items-center"
   >
-    <div class="header-logo sm:flex hidden">
+    <div class="header-logo md:flex hidden">
       <img class="w-24" :src="headerLogo" alt="logo" />
       <img class="w-24" :src="headerLetter" alt="letter" />
     </div>
-    <div class="sm:hidden w-full sm:static fixed">
+    <div class="md:hidden w-full md:static fixed">
       <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
     </div>
     <BurgerMenu/>
     <nav>
       <div class="space-x-4">
-        <router-link id="works" to="/works" class="sm:inline hidden">
+        <router-link id="works" to="/works" class="md:inline hidden">
           <span>WORKS</span>
         </router-link>
-        <router-link id="profile" to="/profile" class="sm:inline hidden">
+        <router-link id="profile" to="/profile" class="md:inline hidden">
           <span>PROFILE</span>
         </router-link>
       </div>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="sm:hidden fixed bottom-0 z-40">
+    <div class="md:hidden fixed bottom-0 z-40">
       <button type="button" class="menu-btn p-4" v-on:click="open = !open">
         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
       </button>
     </div>
     <div
-      class="burger-menu fixed w-full h-full z-20 sm:hidden"
+      class="burger-menu fixed w-full h-full z-20 md:hidden"
       :class="{ 'is-active': open }"
     >
       <div class="flex flex-col bg-white w-full h-screen pl-36 pt-40 text-3xl space-y-14">
