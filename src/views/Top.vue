@@ -29,29 +29,30 @@
         </div>
         <div class="md:mt-8 mt-20 mr-0 mb-0 ml-auto md:w-40 w-40">
           <a
-            class="bg-black text-white p-2 transition duration-250 ease-in-out hover:opacity-80"
+            class="bg-color text-white p-2 transition duration-250 ease-in-out hover:opacity-80"
             href="#"
-            >more15movies→</a
+            >more movies→</a
           >
         </div>
       </div>
       <div class="md:px-32 pl-20 pb-32">
         <h2 class="text-4xl text-left md:py-10 py-5">PROFILE</h2>
-        <div class="md:flex content-center">
+        <div class="md:flex content-center items-center">
           <div class="md:w-2/4 md:mr-0 mr-4">
             <img :src="profileImg" alt="profile" />
           </div>
-          <div class="md:w-2/4 text-center content-center">
-            <p class="md:text-5xl md:mt-48 md:mb-40 text-2xl mt-2 mb-4 md:text-center text-left">
+          <div class="flex justify-between flex-col md:w-2/4 text-center content-center">
+            <p class="md:text-4xl text-2xl md:text-center text-left">
               Tomoaki Sato
             </p>
-            <div class="flex justify-end pr-4">
-              <a
-                class="bg-black text-white p-2 transition duration-250 ease-in-out hover:opacity-80"
+            <div class="flex justify-end">
+             <a
+                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:opacity-80"
                 href="#"
-                >video creator →</a
+                >view more →</a
               >
             </div>
+            
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@ export default {
           title:
             "【アメリカ人が歌う】Make you happy / NiziU‐Feat.ケビン【アカペラ】",
           class: "sm:col-span-2 sm:text-base text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-14 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
         {
           id: 2,
@@ -86,7 +87,7 @@ export default {
           title:
             "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
           class: "md:col-span-2 md:text-base text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-14 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
         {
           id: 3,
@@ -94,7 +95,7 @@ export default {
           href: "#",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-4 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
         {
           id: 4,
@@ -102,7 +103,7 @@ export default {
           href: "#",
           title: "【ハモネプ出場者が歌う】Mrs. GREEN APPLE ベス…",
           class: "text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-4 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
         {
           id: 5,
@@ -111,7 +112,7 @@ export default {
           title:
             "【10分で上手くなる！】ネイティブに英語の発音レッスン…",
           class: "text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-4 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
         {
           id: 6,
@@ -120,7 +121,7 @@ export default {
           title:
             "【エアコン】誰でもできる！掃除のプロが教えるエアコン…",
           class: "text-xs",
-          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4 md:pl-4 pl-8"
+          icon:"fab fa-youtube color w-1/4 md:float-none float-left md:py-0 py-4"
         },
       ],
     };
@@ -133,6 +134,9 @@ export default {
 </script>
 
 <style scoped>
+.bg-color {
+  background-color: #332F2E;
+}
 .color {
   color: red;
 }

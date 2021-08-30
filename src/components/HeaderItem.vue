@@ -11,7 +11,7 @@
     </div>
     <BurgerMenu/>
     <nav>
-      <div class="space-x-4">
+      <div class="space-x-8">
         <router-link id="works" to="/works" class="md:inline hidden">
           <span>WORKS</span>
         </router-link>
