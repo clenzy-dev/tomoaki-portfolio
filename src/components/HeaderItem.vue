@@ -6,7 +6,7 @@
       <img class="w-24" :src="headerLogo" alt="logo" />
       <img class="w-24" :src="headerLetter" alt="letter" />
     </div>
-    <div class="md:hidden w-full md:static fixed">
+    <div class="md:hidden w-full md:static fixed top-2 left-2">
       <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
     </div>
     <BurgerMenu/>

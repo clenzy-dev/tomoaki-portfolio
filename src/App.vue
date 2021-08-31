@@ -3,6 +3,9 @@
 </template>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Roboto;
 }

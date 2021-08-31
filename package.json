@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "postcss ./src/assets/style.css -o ./src/assets/dist.css --watch"
+    "dev": "postcss ./src/assets/style.css -o ./src/assets/dist.css"
   },
   "dependencies": {
     "core-js": "^3.6.5",
