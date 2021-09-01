@@ -30,7 +30,7 @@ export default {
     return {
       headerLogo: require("../assets/img/tomoaki-logo.png"),
       headerLetter: require("../assets/img/tomoaki-letter.png"),
-      headerLogoSp: require("../assets/img/tomoaki-logo-wletter-op.png"),
+      headerLogoSp: require("../assets/img/200-200.png"),
     };
   },
   components: {

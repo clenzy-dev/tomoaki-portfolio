@@ -10,7 +10,7 @@
         muted
       ></video>
       <div class="md:px-24 pl-20">
-        <h2 class="catch text-4xl text-left pt-20 pb-10">WORKS</h2>
+        <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5">WORKS</h2>
         <div>
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-4 md:pr-0 pr-4">
             <a
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="md:px-24 pl-20 pb-40">
-        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 py-5">PROFILE</h2>
+        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5">PROFILE</h2>
         <div class="md:flex content-center items-center relative">
           <div class="md:w-2/4 md:mr-0 mr-4">
             <img :src="profileImg" alt="profile" />
@@ -88,7 +88,7 @@ export default {
         {
           id: 1,
           img: require("../assets/img/MakeYouHappy-Kevin.png"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=siFt7m8S8OY",
           title:
             "【アメリカ人が歌う】Make you happy / NiziU ‐ Feat.ケビン【アカペラ】",
           class: "sm:col-span-2 sm:text-base text-xs",
@@ -98,7 +98,7 @@ export default {
         {
           id: 2,
           img: require("../assets/img/citrus-daice.png"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
           title:
             "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
           class: "md:col-span-2 md:text-base text-xs",
@@ -108,7 +108,7 @@ export default {
         {
           id: 3,
           img: require("../assets/img/PaleBlue-yonezu.png"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "text-xs",
           icon:
@@ -117,7 +117,7 @@ export default {
         {
           id: 4,
           img: require("../assets/img/MGA-medley.png"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
           title: "【ハモネプ出場者が歌う】Mrs. GREEN APPLE…",
           class: "text-xs",
           icon:
@@ -126,7 +126,7 @@ export default {
         {
           id: 5,
           img: require("../assets/img/Kevin-taik1.jpg"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=bhGjP32JyL8",
           title: "【10分で上手くなる！】ネイティブに英語の発音…",
           class: "text-xs",
           icon:
@@ -135,7 +135,7 @@ export default {
         {
           id: 6,
           img: require("../assets/img/cleaning.jpg"),
-          href: "#",
+          href: "https://www.youtube.com/watch?v=KhudW2ePa10",
           title: "【エアコン】誰でもできる！掃除のプロが教える…",
           class: "text-xs",
           icon:
