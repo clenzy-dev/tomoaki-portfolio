@@ -12,10 +12,10 @@
       <div class="md:px-24 pl-20">
         <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5">WORKS</h2>
         <div>
-          <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-4 md:pr-0 pr-4">
+          <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
             <a
               :class="item.class"
-              class=" transition duration-250 ease-in-out bg-gray-100 transform hover:scale-105"
+              class=" transition duration-250 ease-in-out bg-bgGray hover:opacity-40"
               :href="item.href"
               v-for="item in items"
               :key="item.id"
@@ -40,18 +40,20 @@
             </a>
           </div>
         </div>
-        <div class="text-center w-32 ml-auto mt-4 md:mr-0 mr-4">
-            <a
-              class="bg-color block text-white p-2 transition duration-250 ease-in-out hover:opacity-80"
-              href="#"
-              >more movies→</a
-            >
+        <div class="text-center w-32 ml-auto mt-4 md:mr-0 mr-0">
+          <div class="block p-2">
+            <router-link id="works" to="/works" class="bg-black text-white py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black">
+              more movies→
+            </router-link>
+          </div>
         </div>
       </div>
       <div class="md:px-24 pl-20 pb-40">
-        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5">PROFILE</h2>
+        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5">
+          PROFILE
+        </h2>
         <div class="md:flex content-center items-center relative">
-          <div class="md:w-2/4 md:mr-0 mr-4">
+          <div class="md:w-2/4 md:mr-0 mr-2">
             <img :src="profileImg" alt="profile" />
           </div>
           <div
@@ -60,12 +62,14 @@
             <p class="md:text-4xl text-2xl md:text-center text-left">
               Tomoaki Sato
             </p>
-            <div class="absolute md:bottom-0.5 md:right-0 -bottom-10 right-4">
-              <a
-                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:opacity-80"
-                href="#"
-                >view more →</a
+            <div class="absolute md:bottom-0.5 md:right-0 -bottom-10 right-2">
+              <router-link
+                id="profile"
+                to="/profile"
+                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black"
               >
+                view more→
+              </router-link>
             </div>
           </div>
         </div>
@@ -152,9 +156,6 @@ export default {
 </script>
 
 <style scoped>
-.bg-color {
-  background-color: #332f2e;
-}
 .color {
   color: red;
 }
@@ -165,26 +166,27 @@ export default {
   display: flex;
   align-items: center;
 }
-.catch:before, .catch:after {
-  border-top: 2px solid #C40F14;
+.catch:before,
+.catch:after {
+  border-top: 2px solid #c40f14;
   content: "";
-  width: .2em; 
+  width: 0.2em;
 }
 .catch:after {
-  border-top: 2px solid #C40F14;
-;
+  border-top: 2px solid #c40f14;
   content: "";
-  width: 3.5em; 
+  width: 3.5em;
 }
 .catch:before {
-  margin-right: .2em; 
+  margin-right: 0.2em;
 }
 .catch:after {
-  margin-left: .2em;
+  margin-left: 0.2em;
 }
-@media screen and (min-width: 768px) { 
-.catch:before, .catch:after {
-  display: none;
+@media screen and (min-width: 768px) {
+  .catch:before,
+  .catch:after {
+    display: none;
+  }
 }
- }
 </style>

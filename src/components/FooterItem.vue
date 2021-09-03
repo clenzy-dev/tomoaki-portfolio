@@ -1,12 +1,12 @@
 <template>
-  <footer class="md:bg-gray-100">
+  <footer class="md:bg-bgGray">
     <div class="md:pl-8 md:pr-32 pr-4">
       <div
         class="md:text-right md:pl-0 pl-20 pt-4 space-y-4"
         v-for="item in routerItems"
         :key="item.title"
       >
-        <router-link :id="item.id" :to="item.to" class="text-2xl">
+        <router-link :id="item.id" :to="item.to" class="text-2xl text-gray hover:text-black">
           {{ item.title }}
         </router-link>
       </div>
@@ -17,7 +17,7 @@
           /></a>
         </div>
         <div
-          class="flex md:pl-0 md:justify-end justify-start space-x-2 md:ml-0 ml-20"
+          class="flex md:pl-0 md:justify-end justify-around space-x-2 md:ml-0 ml-20"
         >
           <div
             class="link md:pb-0 pb-4 flex content-center items-center"
@@ -46,7 +46,7 @@ export default {
       routerItems: [
         { title: "TOP", id: "top", to: "/works" },
         { title: "WORKS", id: "works", to: "/works" },
-        { title: "PLOFILE", id: "profile", to: "/plofile" },
+        { title: "PROFILE", id: "profile", to: "/plofile" },
       ],
       snsItems: [
         {
