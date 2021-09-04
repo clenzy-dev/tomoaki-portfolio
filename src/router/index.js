@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Top from "../views/Top.vue";
 import Works from "../views/Works.vue";
-import Plofile from "../views/Plofile.vue";
+import Profile from "../views/Profile.vue";
 
 const routes = [
   {
@@ -15,9 +15,9 @@ const routes = [
     component: Works,
   },
   {
-    path: "/plofile",
-    name: "plofile",
-    component: Plofile,
+    path: "/profile",
+    name: "profile",
+    component: Profile,
   }
 ];
 

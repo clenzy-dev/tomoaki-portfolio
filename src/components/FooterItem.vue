@@ -6,7 +6,11 @@
         v-for="item in routerItems"
         :key="item.title"
       >
-        <router-link :id="item.id" :to="item.to" class="text-2xl text-gray hover:text-black">
+        <router-link
+          :id="item.id"
+          :to="item.to"
+          class="text-2xl text-gray hover:text-black"
+        >
           {{ item.title }}
         </router-link>
       </div>
@@ -44,7 +48,7 @@ export default {
       open: false,
       FooterLogo: require("../assets/img/200-200.png"),
       routerItems: [
-        { title: "TOP", id: "top", to: "/works" },
+        { title: "TOP", id: "top", to: "/" },
         { title: "WORKS", id: "works", to: "/works" },
         { title: "PROFILE", id: "profile", to: "/plofile" },
       ],

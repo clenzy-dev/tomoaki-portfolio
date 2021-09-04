@@ -10,7 +10,7 @@
         muted
       ></video>
       <div class="md:px-24 pl-20">
-        <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5">WORKS</h2>
+        <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5 md:pr-0 pr-2">WORKS</h2>
         <div>
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
             <a
@@ -40,16 +40,16 @@
             </a>
           </div>
         </div>
-        <div class="text-center w-32 ml-auto mt-4 md:mr-0 mr-0">
-          <div class="block p-2">
-            <router-link id="works" to="/works" class="bg-black text-white py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black">
+        <div class="text-center w-32 ml-auto mt-4 md:mr-0 mr-1">
+          <div class="block">
+            <router-link id="works" to="/works" class="bg-black text-white py-2 px-2 transition duration-250 ease-in-out hover:bg-white hover:text-black">
               more movies→
             </router-link>
           </div>
         </div>
       </div>
       <div class="md:px-24 pl-20 pb-40">
-        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5">
+        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5 md:pr-0 pr-2">
           PROFILE
         </h2>
         <div class="md:flex content-center items-center relative">
@@ -168,14 +168,14 @@ export default {
 }
 .catch:before,
 .catch:after {
-  border-top: 2px solid #c40f14;
+  border-bottom: 2px solid #c40f14;
   content: "";
   width: 0.2em;
 }
 .catch:after {
-  border-top: 2px solid #c40f14;
+  border-bottom: 2px solid #c40f14;
   content: "";
-  width: 3.5em;
+  width: 100%;
 }
 .catch:before {
   margin-right: 0.2em;
