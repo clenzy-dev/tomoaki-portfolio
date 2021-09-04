@@ -3,7 +3,8 @@
     <HeaderItem />
     <main>
       <div class="relative">
-        <div id="loaderWrap"
+        <div
+          id="loaderWrap"
           class="absolute top-0 left-0 w-full h-full z-50 flex items-center content-center bg-white"
         >
           <div class="loader"></div>
@@ -165,8 +166,8 @@ export default {
   },
   methods: {
     window: (onload = function() {
-      const spinner = document.getElementById('loaderWrap');
-      spinner.classList.add('loaded');
+      const spinner = document.getElementById("loaderWrap");
+      spinner.classList.add("loaded");
     }),
   },
   components: {
@@ -182,7 +183,7 @@ export default {
   color: red;
 }
 /*↑アイコンに戻さなかったら消去*/
-/*↓ロード画面制御*/ 
+/*↓ロード画面制御*/
 .loader {
   color: #000;
   font-size: 90px;
@@ -284,8 +285,9 @@ export default {
 .loaded {
   opacity: 0;
   visibility: hidden;
+  transition: .3s linear;
 }
-/*↑ロード画面制御*/ 
+/*↑ロード画面制御*/
 .size {
   font-size: 2em;
 }

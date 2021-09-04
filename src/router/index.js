@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 import Top from "../views/Top.vue";
 import Works from "../views/Works.vue";
 import Profile from "../views/Profile.vue";
@@ -18,12 +18,11 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile,
-  }
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
-
-export default router
+  routes,
+});
+export default router;
