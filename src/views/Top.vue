@@ -2,15 +2,24 @@
   <div>
     <HeaderItem />
     <main>
-      <video class="hidden md:block" :src="mainVideo" autoplay muted></video>
-      <video
-        class="md:hidden pt-20 w-full"
-        :src="mainVideoSp"
-        autoplay
-        muted
-      ></video>
+      <div class="relative">
+        <div id="loaderWrap"
+          class="absolute top-0 left-0 w-full h-full z-50 flex items-center content-center bg-white"
+        >
+          <div class="loader"></div>
+        </div>
+        <video class="hidden md:block" :src="mainVideo" autoplay muted></video>
+        <video
+          class="md:hidden pt-20 w-full"
+          :src="mainVideoSp"
+          autoplay
+          muted
+        ></video>
+      </div>
       <div class="md:px-24 pl-20">
-        <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5 md:pr-0 pr-2">WORKS</h2>
+        <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5 md:pr-0 pr-2">
+          WORKS
+        </h2>
         <div>
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
             <a
@@ -42,14 +51,20 @@
         </div>
         <div class="text-center w-32 ml-auto mt-4 md:mr-0 mr-1">
           <div class="block">
-            <router-link id="works" to="/works" class="bg-black text-white py-2 px-2 transition duration-250 ease-in-out hover:bg-white hover:text-black">
+            <router-link
+              id="works"
+              to="/works"
+              class="bg-black text-white py-2 px-2 transition duration-250 ease-in-out hover:bg-white hover:text-black"
+            >
               more movies→
             </router-link>
           </div>
         </div>
       </div>
       <div class="md:px-24 pl-20 pb-40">
-        <h2 class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5 md:pr-0 pr-2">
+        <h2
+          class="catch text-4xl text-left md:pt-32 md:pb-10 pt-20 pb-5 md:pr-0 pr-2"
+        >
           PROFILE
         </h2>
         <div class="md:flex content-center items-center relative">
@@ -148,6 +163,12 @@ export default {
       ],
     };
   },
+  methods: {
+    window: (onload = function() {
+      const spinner = document.getElementById('loaderWrap');
+      spinner.classList.add('loaded');
+    }),
+  },
   components: {
     HeaderItem,
     FooterItem,
@@ -156,9 +177,115 @@ export default {
 </script>
 
 <style scoped>
+/*↓アイコンに戻さなかったら消去*/
 .color {
   color: red;
 }
+/*↑アイコンに戻さなかったら消去*/
+/*↓ロード画面制御*/ 
+.loader {
+  color: #000;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/*↑ロード画面制御*/ 
 .size {
   font-size: 2em;
 }
