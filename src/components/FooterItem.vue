@@ -50,7 +50,7 @@ export default {
       routerItems: [
         { title: "TOP", id: "top", to: "/" },
         { title: "WORKS", id: "works", to: "/works" },
-        { title: "PROFILE", id: "profile", to: "/plofile" },
+        { title: "PROFILE", id: "profile", to: "/profile" },
       ],
       snsItems: [
         {

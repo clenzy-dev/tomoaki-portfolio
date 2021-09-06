@@ -25,7 +25,7 @@
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
             <a
               :class="item.class"
-              class=" transition duration-250 ease-in-out bg-bgGray hover:opacity-40"
+              class="bg-bgGray transition duration-250 ease-in-out hover:opacity-40"
               :href="item.href"
               v-for="item in items"
               :key="item.id"
@@ -33,9 +33,9 @@
               <div class="md:p-2">
                 <img class="" :src="item.img" :alt="item.id" />
               </div>
-              <div class="p-2">
+              <div class="md:p-2 p-4">
                 <div class="flex items-center justify-between">
-                  <p class=" w-3/4 md:float-none float-left">
+                  <p class=" w-3/4 md:float-none float-left md:text-base sm:text-xl">
                     {{ item.title }}
                   </p>
                   <div class="w-1/12">
@@ -57,7 +57,7 @@
               to="/works"
               class="bg-black text-white py-2 px-2 transition duration-250 ease-in-out hover:bg-white hover:text-black"
             >
-              more movies→
+              View more
             </router-link>
           </div>
         </div>
@@ -82,9 +82,9 @@
               <router-link
                 id="profile"
                 to="/profile"
-                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black"
+                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black italic border"
               >
-                view more→
+                View more
               </router-link>
             </div>
           </div>
@@ -98,6 +98,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
+
 export default {
   data() {
     return {
@@ -285,7 +286,7 @@ export default {
 .loaded {
   opacity: 0;
   visibility: hidden;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 /*↑ロード画面制御*/
 .size {
