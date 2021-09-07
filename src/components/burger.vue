@@ -8,11 +8,15 @@
       >
         <span
           :class="{ activetop: open }"
-          class="inline-block absolute bottom-10 w-full h-1 bg-black transition duration-250 ease-in-out"
+          class="inline-block absolute bottom-11 w-full h-px bg-black transition duration-250 ease-in-out"
+        ></span>
+        <span
+          :class="{ activemiddle: open }"
+          class="inline-block absolute bottom-8 w-full h-px bg-black transition duration-250 ease-in-out"
         ></span>
         <span
           :class="{ activebottom: open }"
-          class="inline-block absolute bottom-6 w-full h-1 bg-black transition duration-250 ease-in-out"
+          class="inline-block absolute bottom-5 w-full h-px bg-black transition duration-250 ease-in-out"
         ></span>
       </button>
     </div>
@@ -26,11 +30,11 @@
         <router-link id="top" to="/">
           <span>TOP</span>
         </router-link>
-        <hr width="15%" noshade="" class="mx-auto" />
+        <hr width="10%" noshade="" class="mx-auto" />
         <router-link id="works" to="/works">
           <span>WORKS</span>
         </router-link>
-        <hr width="15%" noshade="" class="mx-auto" />
+        <hr width="10%" noshade="" class="mx-auto" />
         <router-link id="profile" to="/profile">
           <span>PROFILE</span>
         </router-link>
@@ -58,7 +62,10 @@ export default {
   transform: translateX(0);
 }
 .activetop {
-  transform: translateY(5px) rotate(-45deg);
+  transform: translateY(12px) rotate(-45deg);
+}
+.activemiddle {
+  display: none;
 }
 .activebottom {
   transform: translateY(-11px) rotate(45deg);
