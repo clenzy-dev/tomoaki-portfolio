@@ -35,7 +35,9 @@
               </div>
               <div class="md:p-2 p-4">
                 <div class="flex md:block lg:flex items-center justify-between">
-                  <p class="md:w-full lg:w-3/4 md:float-none float-left md:text-base sm:text-xl">
+                  <p
+                    class="md:w-full lg:w-3/4 md:float-none float-left md:text-base sm:text-xl"
+                  >
                     {{ item.title }}
                   </p>
                   <div class="w-1/12">
@@ -79,15 +81,13 @@
             <p class="md:text-4xl text-2xl md:text-center text-left">
               Tomoaki Sato
             </p>
-            <div class="absolute md:bottom-0.5 md:right-0 -bottom-10 right-2">
-              <router-link
-                id="profile"
-                to="/profile"
-                class="bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black italic border"
-              >
-                View more
-              </router-link>
-            </div>
+            <router-link
+              id="profile"
+              to="/profile"
+              class="md:bottom-0.5 md:right-0 -bottom-10 right-2 absolute bg-black text-white px-4 py-2 transition duration-250 ease-in-out hover:bg-white hover:text-black italic border"
+            >
+              View more
+            </router-link>
           </div>
         </div>
       </div>
@@ -130,28 +130,31 @@ export default {
           img: require("../assets/img/PaleBlue-yonezu.png"),
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
-          class: "text-xs"
+          class: "text-xs",
         },
         {
           id: 4,
           img: require("../assets/img/MGA-medley.png"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
-          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN APPLE ベス…",
-          class: "text-xs"
+          title:
+            "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN APPLE…",
+          class: "text-xs",
         },
         {
           id: 5,
           img: require("../assets/img/Kevin-taik1.jpg"),
           href: "https://www.youtube.com/watch?v=bhGjP32JyL8",
-          title: "【10分で上手くなる！】ネイティブに英語の発音レッスンをお願いしてみた…",
-          class: "text-xs"
+          title:
+            "【10分で上手くなる！】ネイティブに英語の発音レッスンをお願い…",
+          class: "text-xs",
         },
         {
           id: 6,
           img: require("../assets/img/cleaning.jpg"),
           href: "https://www.youtube.com/watch?v=KhudW2ePa10",
-          title: "【エアコン】誰でもできる！掃除のプロが教えるエアコンクリーニング",
-          class: "text-xs"
+          title:
+            "【エアコン】誰でもできる！掃除のプロが教えるエアコンクリーニング",
+          class: "text-xs",
         },
       ],
     };
@@ -170,11 +173,6 @@ export default {
 </script>
 
 <style scoped>
-/*↓アイコンに戻さなかったら消去*/
-.color {
-  color: red;
-}
-/*↑アイコンに戻さなかったら消去*/
 /*↓ロード画面制御*/
 .loader {
   color: #000;
