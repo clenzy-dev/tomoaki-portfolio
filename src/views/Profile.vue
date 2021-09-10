@@ -2,7 +2,7 @@
   <HeaderItem />
   <main class="md:px-28 px-0 pl-20 md;pr-0 pr-2">
     <div class="md:pb-20">
-      <h1 class="text-4xl text-center py-40">PROFILE</h1>
+      <h1 class="text-4xl text-center pt-40 pb-20">PROFILE</h1>
       <h2 class="text-4xl text-center font-bold pb-36 md:block hidden">
         感動を、もっと近くに。
       </h2>
@@ -10,8 +10,8 @@
         <div class="md:w-2/4  md:p-4">
           <img :src="profileImg" alt="profile" />
         </div>
-        <div class="md:w-1/2 p-4 md:h-1/2 md:block hidden">
-          <p class="w-full">
+        <div class="md:w-1/2 p-4 md:block hidden">
+          <p class="text-base">
             私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
             私自身もYouTubeが大好きで、動画制作を始める前は、YouTubeクリエイターのファンのうちの1人でした。たくさんのYouTuberさんの動画を見ることで元気をもらったり、感動したりといった経験を何度もしました。<br /><br />
             そんな私が制作した動画を見ていただくことで「感動した」「楽しい」「おもしろい」「役に立つ」など、たくさんの視聴者のみなさまに想いを届けられる動画を制作することを目標にしています。<br /><br />
@@ -29,20 +29,26 @@
     </div>
     <div class="py-10">
       <h3 class="text-3xl pb-5 md:block hidden">CAREER</h3>
-      <dl v-for="item in careerItems" :key="item.year" class="flex md:text-base text-sm">
-        <dt class="pr-10 md:text-red">{{ item.year }}</dt>
-        <dd>{{ item.contents }}</dd>
+      <dl
+        v-for="item in careerItems"
+        :key="item.year"
+        class="flex md:text-base text-sm"
+      >
+        <dt class="md:text-red float-left sm:text-base text-xs">
+          {{ item.year }}
+        </dt>
+        <dd class="ml-10 sm:text-base text-xs">{{ item.contents }}</dd>
       </dl>
     </div>
-    <div class="py-10">
+    <div class="md:py-10 py-4">
       <h3 class="text-3xl pb-5 md:block hidden">SKILLS</h3>
-      <p>Adobe Premiere Pro / Adobe Phodoshop / Wondershare Filmora 9</p>
+      <p>Adobe Premiere Pro / Adobe Photoshop / Wondershare Filmora 9</p>
     </div>
     <div class="py-10">
       <h3 class="text-3xl pb-5">RECOMMENDATIONS</h3>
       <div class="md:flex flex-wrap">
         <div
-          class="flex md:w-5/12 p-5 m-2 bg-bgGray"
+          class="flex items-center md:w-5/12 p-5 m-2 bg-bgGray relative"
           v-for="item in recoItems"
           :key="item.name"
         >
@@ -51,10 +57,22 @@
           </div>
           <div>
             <p class="p-2">{{ item.name }}</p>
-            <div><img src="" alt="" /></div>
+          </div>
+          <div class="w-1/12 absolute right-3 bottom-3">
+            <img src="../assets/img/youtube-logo.png" alt="" />
           </div>
         </div>
       </div>
+    </div>
+    <div class="md:hidden block pb-10">
+      <h3 class="text-3xl pb-5">GREETING</h3>
+      <p>
+        感動を、もっと近くに。<br /><br />
+        私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
+        私自身もYouTubeが大好きで、動画制作を始める前は、YouTubeクリエイターのファンのうちの1人でした。たくさんのYouTuberさんの動画を見ることで元気をもらったり、感動したりといった経験を何度もしました。<br /><br />
+        そんな私が制作した動画を見ていただくことで「感動した」「楽しい」「おもしろい」「役に立つ」など、たくさんの視聴者のみなさまに想いを届けられる動画を制作することを目標にしています。<br /><br />
+        みなさまの日常に彩りを加える動画を数多く制作できるよう、努力していきます。
+      </p>
     </div>
   </main>
   <FooterItem />
@@ -106,3 +124,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.pt-full {
+  padding-top: 100%;
+}
+</style>

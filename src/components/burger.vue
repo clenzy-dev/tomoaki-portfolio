@@ -71,4 +71,3 @@ export default {
   transform: translateY(-11px) rotate(45deg);
 }
 </style>
-

@@ -8,6 +8,6 @@ html {
 }
 body {
   font-family: Roboto;
-  color: #2A2A2D;
+  color: #2a2a2d;
 }
 </style>
