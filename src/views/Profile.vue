@@ -111,10 +111,6 @@ export default {
           img: require("../assets/img/MakeYouHappy-Kevin.png"),
           name: "とおるすアカペラ制作中",
         },
-        {
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
-          name: "桃太郎不動産チャンネル",
-        },
       ],
     };
   },
