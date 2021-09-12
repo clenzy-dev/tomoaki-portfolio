@@ -13,7 +13,7 @@
       </div>
       <div class="md:px-24 pl-20">
         <h2 class="catch text-4xl text-left pt-20 md:pb-10 pb-5 md:pr-0 pr-2">
-          WORKS
+          WORK
         </h2>
         <div>
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
