@@ -18,7 +18,7 @@
             <div class="md:p-2 p-4">
               <div class="flex md:block lg:flex items-center justify-between">
                 <p
-                  class="md:w-full lg:w-3/4 md:float-none float-left md:text-base sm:text-xl"
+                  class="md:w-full lg:w-3/4 md:float-none float-left md:text-xs sm:text-xl"
                 >
                   {{ item.title }}
                 </p>
