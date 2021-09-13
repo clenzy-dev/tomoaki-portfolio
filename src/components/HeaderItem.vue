@@ -1,5 +1,5 @@
 <template>
-  <header class="md:px-8 md:py-10 md:flex md:justify-between md:items-center">
+  <header class="md:px-16 md:pt-8 md:pb-6 md:flex md:justify-between md:items-center">
     <div class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </div>
@@ -12,14 +12,14 @@
         <router-link
           id="works"
           to="/works"
-          class="md:inline hidden text-gray hover:text-black"
+          class="md:inline hidden text-gray hover:text-black md:text-xl"
         >
           <span>WORKS</span>
         </router-link>
         <router-link
           id="profile"
           to="/profile"
-          class="md:inline hidden text-gray hover:text-black"
+          class="md:inline hidden text-gray hover:text-black md:text-xl"
         >
           <span>PROFILE</span>
         </router-link>
