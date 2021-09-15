@@ -4,7 +4,7 @@
       <img class="w-36" :src="headerLogo" alt="logo" />
     </div>
     <div class="md:hidden w-full md:static fixed top-2 left-2">
-      <img class="w-16" :src="headerLogoSp" alt="logo-sp" />
+      <img class="w-12 mt-4" :src="headerLogoSp" alt="logo-sp" />
     </div>
     <BurgerMenu />
     <nav>

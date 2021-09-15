@@ -9,12 +9,12 @@
         <router-link
           :id="item.id"
           :to="item.to"
-          class="text-2xl text-gray hover:text-black"
+          class="md:text-4xl text-xl md:text-gray hover:text-black"
         >
           {{ item.title }}
         </router-link>
       </div>
-      <div class="md:flex text-center justify-between pt-10">
+      <div class="md:flex text-center justify-between md:pt-10 pt-5">
         <div class="">
           <a class="w-20 md:inline hidden" href="#"
             ><img class="w-20" src="../assets/img/200-200.png" alt="logo"
@@ -56,25 +56,25 @@ export default {
         {
           title: "instagram",
           href: "https://www.instagram.com/tomoakiii0323/",
-          class: "w-10",
+          class: "md:w-12 w-10",
           src: require("../assets/img/instagram-logo.png"),
         },
         {
           title: "twitter",
           href: "https://twitter.com/tomoakiii0323",
-          class: "w-10 ml-4 pt-1",
+          class: "md:w-12 w-10 ml-7 pt-1",
           src: require("../assets/img/twitter-logo.png"),
         },
         {
           title: "facebook",
           href: "#",
-          class: "w-10 ml-4",
+          class: "md:w-12 w-10 ml-7",
           src: require("../assets/img/facebook-logo.png"),
         },
         {
           title: "email",
           href: "mailto:tomoaki0323video@gmail.com",
-          class: "w-10 ml-4",
+          class: "md:w-12 w-10 ml-7",
           src: require("../assets/img/email-logo.png"),
         },
       ],

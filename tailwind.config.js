@@ -2,14 +2,23 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{js,vue}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      black: "#332f2e",
-      white: "#ffffff",
-      gray: "#9e9e9f",
-      bgGray:"#f4f4f4",
-      red:"#c40f14"
+    extend: {
+      colors: {
+        black: "#332f2e",
+        white: "#ffffff",
+        gray: "#9e9e9f",
+        bgGray:"#f4f4f4",
+        red:"#c40f14",
+        skillsColor: "#1e1e1e"
+      },
+      spacing: {
+        // px単位
+        ...[...Array(120)].reduce((m, _, i) => {
+          m[`${i}px`] = `${i}px`
+          return m
+        }, {}),
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},
