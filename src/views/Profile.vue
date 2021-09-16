@@ -2,7 +2,11 @@
   <HeaderItem />
   <main class="md:px-28 px-0 pl-20 md;pr-0 pr-2">
     <div class="md:pb-36">
-      <h1 class="md:text-4xl text-2xl text-center md:pt-64 pt-32 md:pb-44 pb-10">PROFILE</h1>
+      <h1
+        class="md:text-4xl text-2xl text-center md:pt-64 pt-32 md:pb-44 pb-10"
+      >
+        PROFILE
+      </h1>
       <h2 class="text-4xl text-center font-bold pb-24 md:block hidden">
         感動を、もっと近くに。
       </h2>
@@ -42,7 +46,9 @@
     </div>
     <div class="md:py-10">
       <h3 class="text-2xl pb-5 md:block hidden">SKILLS</h3>
-      <p class="md:text-xl text-sm text-skillsColor">Adobe Premiere Pro / Adobe Photoshop / Wondershare Filmora 9</p>
+      <p class="md:text-xl text-sm">
+        Adobe Premiere Pro / Adobe Photoshop / Wondershare Filmora 9
+      </p>
     </div>
     <div class="py-10">
       <h3 class="md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>

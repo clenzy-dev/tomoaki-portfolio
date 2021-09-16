@@ -1,5 +1,7 @@
 <template>
-  <header class="md:px-16 md:pt-8 md:pb-6 md:flex md:justify-between md:items-center">
+  <header
+    class="md:px-16 md:pt-8 md:pb-6 md:flex md:justify-between md:items-center"
+  >
     <div class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </div>
