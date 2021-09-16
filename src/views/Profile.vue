@@ -104,15 +104,15 @@ export default {
       ],
       recoItems: [
         {
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/torusu-icon.png"),
           name: "とおるすアカペラ / TORUS ACAPELLA",
         },
         {
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/torusu-sub-icon.png"),
           name: "とおるすアカペラ制作中",
         },
         {
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/momotaro-icon.png"),
           name: "桃太郎チャンネル",
         },
       ],
