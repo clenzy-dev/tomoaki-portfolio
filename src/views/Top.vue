@@ -30,15 +30,14 @@
                 <div>
                   <img class="" :src="item.img" :alt="item.id" />
                 </div>
-                <div class="h-auto flex items-center justify-between p-2 ">
-                  <div class="">
+                <div class="flex justify-between items-center p-2">
+                  <div class="w-2/3">
                     <p class="md:text-xl text-xs">
                       {{ item.title }}
                     </p>
                   </div>
-                  <div>
+                  <div :class="item.logoclass">
                     <img
-                      :class="item.imgclass"
                       src="../assets/img/youtube-logo.png"
                       alt="youtube-logo"
                     />
@@ -109,7 +108,7 @@ export default {
           title:
             "【アメリカ人が歌う】Make you happy / NiziU ‐ Feat.ケビン【アカペラ】",
           class: "sm:col-span-2 sm:text-base",
-          imgclass: "md:w-12 w-10",
+          logoclass: "md:w-12 w-10 bottom-4 right-2",
         },
         {
           id: 2,
@@ -117,16 +116,16 @@ export default {
           href: "",
           title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
           class: "sm:col-span-2 sm:text-base",
-          imgclass: "md:w-12 w-10",
+          logoclass: "md:w-12 w-10",
         },
         {
           id: 3,
           img: require("../assets/img/citrus-daice.png"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
           title:
-            "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
+            "【コラボ】CITRUS / Da-iCE【ハイスクール...",
           class: "",
-          imgclass: "md:w-12 w-10",
+          logoclass: "w-10",
         },
         {
           id: 4,
@@ -134,25 +133,25 @@ export default {
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "",
-          imgclass: "w-60px",
+          logoclass: "w-10",
         },
         {
           id: 5,
           img: require("../assets/img/MGA-medley.png"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
           title:
-            "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN APPLE…",
+            "【ハモネプ出場者が歌う】インフェルノから始まる...",
           class: "",
-          imgclass: "w-60px",
+          logoclass: "w-10",
         },
         {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.png"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
           title:
-            "【英語歌ったら即終了】Make you happy - NiziU【アカペラ】feat. ケビン",
+            "【英語歌ったら即終了】Make you happy - ...",
           class: "",
-          imgclass: "w-60px",
+          logoclass: "w-10",
         },
       ],
     };
