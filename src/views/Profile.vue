@@ -38,7 +38,7 @@
         :key="item.year"
         class="flex md:text-base text-sm pb-2"
       >
-        <dt class="md:text-red sm:text-xl text-xs w-1/4">
+        <dt class="md:text-red sm:text-xl text-xs lg:w-1/6 w-1/4">
           {{ item.year }}
         </dt>
         <dd class="sm:text-xl text-xs w-3/5">{{ item.contents }}</dd>
@@ -52,10 +52,13 @@
     </div>
     <div class="md:pl-28 pl-0 py-10">
       <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
-      <div class="lg:flex flex-wrap">
-        <div
-          class="lg:w-5/12 flex items-center bg-bgGray relative"
+      <div class="md:flex md:flex-wrap">
+        <a
+          class="md:w-5/12 flex items-center bg-bgGray relative p-2 m-2"
           :class="item.class"
+          :href="item.href"
+          target="_blank"
+          rel="norefferrer noopener"
           v-for="item in recoItems"
           :key="item.name"
         >
@@ -63,12 +66,12 @@
             <img :class="item.imgclass" :src="item.img" alt="icon" />
           </div>
           <div>
-            <p class="p-2 md:text-xl">{{ item.name }}</p>
+            <p class="w-2/3 sm:w-3/4 p-2 lg:text-xl">{{ item.name }}</p>
           </div>
           <div class="w-1/12 absolute right-3 bottom-3">
             <img src="../assets/img/youtube-logo.png" alt="" />
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div class="md:hidden block pb-6">
@@ -113,18 +116,21 @@ export default {
         {
           img: require("../assets/img/torusu-icon.png"),
           name: "とおるすアカペラ / TORUS ACAPELLA",
-          class: "py-5 px-2 md:mr-1 md:mb-1",
+          href: "https://www.youtube.com/user/subetani",
+          class: "ml-0",
         },
         {
           img: require("../assets/img/torusu-sub-icon.png"),
           name: "とおるすアカペラ制作中",
+          href: "https://www.youtube.com/channel/UCmcjgVVMtUczKv0VQVlQG5w",
           imgclass: "w-11/12",
-          class: "py-5 px-2 md:ml-2 md:mb-1",
+          class: "md:ml-2 ml-0",
         },
         {
           img: require("../assets/img/momotaro-icon.png"),
           name: "桃太郎不動産チャンネル",
-          class: "py-5 px-2 md:mt-1",
+          href: "https://www.youtube.com/channel/UCB9qvO2yaD1sVCpiFMQLsEg",
+          class: "ml-0",
         },
       ],
     };
