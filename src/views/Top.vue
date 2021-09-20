@@ -13,7 +13,7 @@
       </div>
       <div class="md:px-24 pl-24 pt-4">
         <h2
-          class="catch md:text-4xl text-2xl text-left md:pt-20 pt-80 md:pb-10 pb-2 md:pr-0 pr-2"
+          class="catch md:text-4xl text-2xl text-left md:pt-20 pt-20 md:pb-10 pb-2 md:pr-0 pr-2"
         >
           WORKS
         </h2>
@@ -22,22 +22,23 @@
             <div
               :class="item.class"
               class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray"
-              :href="item.href"
               v-for="item in items"
               :key="item.id"
             >
-              <a>
+              <a :href="item.href" target="_blank" rel="norefferrer noopener">
                 <div>
                   <img class="" :src="item.img" :alt="item.id" />
                 </div>
-                <div class="flex justify-between items-center p-2">
+                <div class="p-1 m-1 relative">
                   <div class="w-2/3">
-                    <p class="md:text-xl text-xs">
+                    <p class="lg:text-xl sm:text-base text-xs">
                       {{ item.title }}
                     </p>
                   </div>
-                  <div :class="item.logoclass">
+                  <div>
                     <img
+                      class="absolute right-2 md:top-3 top-1"
+                      :class="item.logoclass"
                       src="../assets/img/youtube-logo.png"
                       alt="youtube-logo"
                     />
@@ -72,7 +73,7 @@
           <div
             class="flex justify-between flex-col md:w-2/4 text-center content-center"
           >
-            <p class="md:text-5xl text-2xl md:text-center text-left">
+            <p class="lg:text-5xl md:text-4xl text-2xl md:text-center text-left md:py-0 py-1">
               Tomoaki Sato
             </p>
             <router-link
@@ -108,24 +109,23 @@ export default {
           title:
             "【アメリカ人が歌う】Make you happy / NiziU ‐ Feat.ケビン【アカペラ】",
           class: "sm:col-span-2 sm:text-base",
-          logoclass: "md:w-12 w-10 bottom-4 right-2",
+          logoclass: "md:w-12 w-6",
         },
         {
           id: 2,
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/tentaikansoku3.png"),
           href: "",
           title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
           class: "sm:col-span-2 sm:text-base",
-          logoclass: "md:w-12 w-10",
+          logoclass: "md:w-12 w-6",
         },
         {
           id: 3,
           img: require("../assets/img/citrus-daice.png"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
-          title:
-            "【コラボ】CITRUS / Da-iCE【ハイスクール...",
+          title: "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
           class: "",
-          logoclass: "w-10",
+          logoclass: "md:w-9 w-6",
         },
         {
           id: 4,
@@ -133,25 +133,23 @@ export default {
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "",
-          logoclass: "w-10",
+          logoclass: "md:w-9 w-6",
         },
         {
           id: 5,
           img: require("../assets/img/MGA-medley.png"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
-          title:
-            "【ハモネプ出場者が歌う】インフェルノから始まる...",
+          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN...",
           class: "",
-          logoclass: "w-10",
+          logoclass: "md:w-9 w-6",
         },
         {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.png"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title:
-            "【英語歌ったら即終了】Make you happy - ...",
+          title: "【英語歌ったら即終了】Make you happy - NiziU【アカ...",
           class: "",
-          logoclass: "w-10",
+          logoclass: "md:w-9 w-6",
         },
       ],
     };
@@ -175,7 +173,7 @@ export default {
 .catch:after {
   border-bottom: 2px solid #c40f14;
   content: "";
-  width: 0.2em;
+  width: 0.4em;
 }
 .catch:after {
   border-bottom: 2px solid #c40f14;

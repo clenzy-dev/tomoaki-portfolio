@@ -9,7 +9,7 @@
         <router-link
           :id="item.id"
           :to="item.to"
-          class="md:text-4xl text-xl md:text-gray hover:text-black"
+          class="lg:text-4xl md:text-3xl text-xl md:text-gray hover:text-black"
         >
           {{ item.title }}
         </router-link>

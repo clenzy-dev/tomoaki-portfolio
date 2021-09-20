@@ -15,7 +15,7 @@
           <img :src="profileImg" alt="profile" />
         </div>
         <div class="md:w-1/2 md:pl-2 md:block hidden">
-          <p class="text-base">
+          <p class="lg:text-base md:text-sm">
             私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
             私自身もYouTubeが大好きで、動画制作を始める前は、YouTubeクリエイターのファンのうちの1人でした。たくさんのYouTuberさんの動画を見ることで元気をもらったり、感動したりといった経験を何度もしました。<br /><br />
             そんな私が制作した動画を見ていただくことで「感動した」「楽しい」「おもしろい」「役に立つ」など、たくさんの視聴者のみなさまに想いを届けられる動画を制作することを目標にしています。<br /><br />
@@ -51,18 +51,19 @@
       </p>
     </div>
     <div class="py-10">
-      <h3 class="md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
-      <div class="md:flex flex-wrap">
+      <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
+      <div class="lg:flex flex-wrap">
         <div
-          class="flex items-center md:w-5/12 p-5 m-2 bg-bgGray relative"
+          class="lg:w-5/12 flex items-center m-2 bg-bgGray relative"
+          :class="item.class"
           v-for="item in recoItems"
           :key="item.name"
         >
           <div class="w-1/6">
-            <img class="rounded-full" :src="item.img" alt="icon" />
+            <img :class="item.imgclass" :src="item.img" alt="icon" />
           </div>
           <div>
-            <p class="p-2">{{ item.name }}</p>
+            <p class="p-2 md:text-xl">{{ item.name }}</p>
           </div>
           <div class="w-1/12 absolute right-3 bottom-3">
             <img src="../assets/img/youtube-logo.png" alt="" />
@@ -71,7 +72,7 @@
       </div>
     </div>
     <div class="md:hidden block pb-6">
-      <h3 class="md:text-3xl text-xl pb-5">GREETING</h3>
+      <h3 class="catch md:text-3xl text-xl pb-5">GREETING</h3>
       <p class="text-xs bg-bgGray p-1">
         感動を、もっと近くに。<br /><br />
         私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
@@ -112,14 +113,18 @@ export default {
         {
           img: require("../assets/img/torusu-icon.png"),
           name: "とおるすアカペラ / TORUS ACAPELLA",
+          class: "py-5 px-2"
         },
         {
           img: require("../assets/img/torusu-sub-icon.png"),
           name: "とおるすアカペラ制作中",
+          imgclass: "w-11/12",
+          class: "py-5 px-2"
         },
         {
           img: require("../assets/img/momotaro-icon.png"),
-          name: "桃太郎チャンネル",
+          name: "桃太郎不動産チャンネル",
+          class: "py-5 px-2"
         },
       ],
     };
@@ -134,5 +139,24 @@ export default {
 <style scoped>
 .pt-full {
   padding-top: 100%;
+}
+
+.catch {
+  display: flex;
+  align-items: center;
+}
+.catch:before {
+  border-bottom: 3px solid #c40f14;
+  content: "";
+  width: 1em;
+}
+.catch:before {
+  margin-right: 0.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .catch:before {
+    display: none;
+  }
 }
 </style>
