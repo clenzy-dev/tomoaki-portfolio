@@ -1,7 +1,7 @@
 <template>
   <HeaderItem />
-  <main class="md:px-28 px-0 pl-20 md;pr-0 pr-2">
-    <div class="md:pb-36">
+  <main class="pl-20 md:pr-0 pr-2">
+    <div class="md:px-28 px-0 md:pb-36">
       <h1
         class="md:text-4xl text-2xl text-center md:pt-64 pt-32 md:pb-44 pb-10"
       >
@@ -15,7 +15,7 @@
           <img :src="profileImg" alt="profile" />
         </div>
         <div class="md:w-1/2 md:pl-2 md:block hidden">
-          <p class="lg:text-base md:text-sm">
+          <p class="lg:text-xl md:text-sm">
             私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
             私自身もYouTubeが大好きで、動画制作を始める前は、YouTubeクリエイターのファンのうちの1人でした。たくさんのYouTuberさんの動画を見ることで元気をもらったり、感動したりといった経験を何度もしました。<br /><br />
             そんな私が制作した動画を見ていただくことで「感動した」「楽しい」「おもしろい」「役に立つ」など、たくさんの視聴者のみなさまに想いを届けられる動画を制作することを目標にしています。<br /><br />
@@ -31,7 +31,7 @@
       <div class="text-3xl md:pt-0 pt-2">Tomoaki Sato</div>
       <div class="text-right">video creator</div>
     </div>
-    <div class="py-10">
+    <div class="md:px-28 px-0 py-10">
       <h3 class="text-2xl pb-5 md:block hidden">CAREER</h3>
       <dl
         v-for="item in careerItems"
@@ -44,17 +44,17 @@
         <dd class="sm:text-xl text-xs w-3/5">{{ item.contents }}</dd>
       </dl>
     </div>
-    <div class="md:py-10">
+    <div class="md:px-28 px-0 md:py-10">
       <h3 class="text-2xl pb-5 md:block hidden">SKILLS</h3>
       <p class="md:text-xl text-sm">
         Adobe Premiere Pro / Adobe Photoshop / Wondershare Filmora 9
       </p>
     </div>
-    <div class="py-10">
+    <div class="md:pl-28 pl-0 py-10">
       <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
       <div class="lg:flex flex-wrap">
         <div
-          class="lg:w-5/12 flex items-center m-2 bg-bgGray relative"
+          class="lg:w-5/12 flex items-center bg-bgGray relative"
           :class="item.class"
           v-for="item in recoItems"
           :key="item.name"
@@ -113,18 +113,18 @@ export default {
         {
           img: require("../assets/img/torusu-icon.png"),
           name: "とおるすアカペラ / TORUS ACAPELLA",
-          class: "py-5 px-2"
+          class: "py-5 px-2 md:mr-1 md:mb-1",
         },
         {
           img: require("../assets/img/torusu-sub-icon.png"),
           name: "とおるすアカペラ制作中",
           imgclass: "w-11/12",
-          class: "py-5 px-2"
+          class: "py-5 px-2 md:ml-2 md:mb-1",
         },
         {
           img: require("../assets/img/momotaro-icon.png"),
           name: "桃太郎不動産チャンネル",
-          class: "py-5 px-2"
+          class: "py-5 px-2 md:mt-1",
         },
       ],
     };
