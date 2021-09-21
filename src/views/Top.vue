@@ -73,7 +73,9 @@
           <div
             class="flex justify-between flex-col md:w-2/4 text-center content-center"
           >
-            <p class="lg:text-5xl md:text-4xl text-2xl md:text-center text-left md:py-0 py-1">
+            <p
+              class="lg:text-5xl md:text-4xl text-2xl md:text-center text-left md:py-0 py-1"
+            >
               Tomoaki Sato
             </p>
             <router-link
@@ -123,7 +125,8 @@ export default {
           id: 3,
           img: require("../assets/img/citrus-daice.png"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
-          title: "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
+          title:
+            "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
