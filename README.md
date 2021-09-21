@@ -1,24 +1,9 @@
 # tomoaki-sato-portfoliosite
 
-## Project setup
-```
-yarn install
-```
+## ステージング環境
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+https://stg--tomoaki-sato.netlify.app/
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 本番環境（ステージングでのチェックが終わったら変更）
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://tomoaki-sato.netlify.app/
