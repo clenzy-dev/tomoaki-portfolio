@@ -15,7 +15,7 @@
           <img :src="profileImg" alt="profile" />
         </div>
         <div class="md:w-1/2 md:pl-2 md:block hidden">
-          <p class="lg:text-xl md:text-sm">
+          <p class="lg:text-lg md:text-sm">
             私はさまざまな種類の動画を創ることで、視聴者のみなさまに感動をお届けすることを理念に活動しています。<br /><br />
             私自身もYouTubeが大好きで、動画制作を始める前は、YouTubeクリエイターのファンのうちの1人でした。たくさんのYouTuberさんの動画を見ることで元気をもらったり、感動したりといった経験を何度もしました。<br /><br />
             そんな私が制作した動画を見ていただくことで「感動した」「楽しい」「おもしろい」「役に立つ」など、たくさんの視聴者のみなさまに想いを届けられる動画を制作することを目標にしています。<br /><br />
@@ -54,7 +54,7 @@
       <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
       <div class="md:flex md:flex-wrap">
         <a
-          class="md:w-5/12 flex items-center bg-bgGray relative p-2 m-2"
+          class="md:w-5/12 flex items-center bg-bgGray relative p-2 m-2 md:mx-2 mx-0"
           :class="item.class"
           :href="item.href"
           target="_blank"
@@ -65,10 +65,10 @@
           <div class="w-1/6">
             <img :class="item.imgclass" :src="item.img" alt="icon" />
           </div>
-          <div>
-            <p class="w-2/3 sm:w-3/4 p-2 lg:text-xl">{{ item.name }}</p>
+          <div class="w-9/12">
+            <p class="p-2">{{ item.name }}</p>
           </div>
-          <div class="w-1/12 absolute right-3 bottom-3">
+          <div class="sm:w-7 w-6 absolute right-3 sm:bottom-3 bottom-2">
             <img src="../assets/img/youtube-logo.png" alt="" />
           </div>
         </a>
