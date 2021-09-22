@@ -2,12 +2,12 @@
   <HeaderItem />
   <main>
     <div class="md:px-32 md:pb-56 pl-20">
-      <h2 class="catch text-4xl text-center pt-40 pb-20">WORKS</h2>
+      <h2 class="catch md:text-4xl text-2xl text-center md:pt-40 pt-28 md:pb-20 pb-14">WORKS</h2>
       <div class="">
         <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
           <div
             :class="item.class"
-            class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2"
+            class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2 shadow-xl"
             v-for="item in items"
             :key="item.id"
           >

@@ -21,7 +21,7 @@
           <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
             <div
               :class="item.class"
-              class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2"
+              class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2 shadow-xl"
               v-for="item in items"
               :key="item.id"
             >
@@ -30,7 +30,7 @@
                   <img class="" :src="item.img" :alt="item.id" />
                 </div>
                 <div class="p-1 m-1 relative">
-                  <div class="w-2/3">
+                  <div class="w-9/12">
                     <p class="lg:text-xl sm:text-base text-xs">
                       {{ item.title }}
                     </p>
@@ -142,7 +142,7 @@ export default {
           id: 5,
           img: require("../assets/img/MGA-medley.png"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
-          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN...",
+          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN ...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
@@ -150,7 +150,7 @@ export default {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.png"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title: "【英語歌ったら即終了】Make you happy - NiziU【アカ...",
+          title: "【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
