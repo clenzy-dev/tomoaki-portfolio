@@ -16,7 +16,7 @@
                 <img class="" :src="item.img" :alt="item.id" />
               </div>
               <div class="p-1 m-1 relative">
-                <div class="w-2/3">
+                <div class="md:w-9/12 w-10/12">
                   <p class="lg:text-xl sm:text-base text-xs">
                     {{ item.title }}
                   </p>
