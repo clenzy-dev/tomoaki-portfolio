@@ -3,7 +3,7 @@
     <HeaderItem />
     <main>
       <div class="relative">
-        <video class="hidden md:block" :src="mainVideo" autoplay muted></video>
+        <video class="hidden md:block" :src="mainVideo" autoplay muted playsinline></video>
         <video
           class="md:hidden pt-20 w-full"
           :src="mainVideoSp"
@@ -29,7 +29,7 @@
                 <div>
                   <img class="" :src="item.img" :alt="item.id" />
                 </div>
-                <div class="p-1 m-1 relative">
+                <div class="p-1 m-1 md:relative flex justify-between">
                   <div class="md:w-9/12 w-10/12">
                     <p class="lg:text-xl sm:text-base text-xs">
                       {{ item.title }}
@@ -37,7 +37,7 @@
                   </div>
                   <div>
                     <img
-                      class="absolute right-2 md:top-3 top-1 md:w-9 sm:w-6 w-5"
+                      class="md:absolute md:right-2 md:top-2 md:w-9 sm:w-6 w-5"
                       :class="item.logoclass"
                       src="../assets/img/youtube-logo.png"
                       alt="youtube-logo"
@@ -136,7 +136,7 @@ export default {
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "lg:col-span-1 sm:text-base",
-          logoclass: "",
+          logoclass: "top-2",
         },
         {
           id: 5,

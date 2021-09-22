@@ -66,7 +66,7 @@
             <img :class="item.imgclass" :src="item.img" alt="icon" />
           </div>
           <div class="w-9/12">
-            <p class="p-2">{{ item.name }}</p>
+            <p class="p-2 md:text-base text-xs">{{ item.name }}</p>
           </div>
           <div class="sm:w-7 w-6 absolute right-3 sm:bottom-3 bottom-2">
             <img src="../assets/img/youtube-logo.png" alt="" />
