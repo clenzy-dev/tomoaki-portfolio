@@ -54,7 +54,7 @@
       <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
       <div class="md:flex md:flex-wrap">
         <a
-          class="md:w-5/12 flex items-center bg-bgGray relative p-2 m-2 md:mx-2 mx-0"
+          class="md:w-5/12 flex items-center bg-bgGray relative p-2 m-2 md:mx-2 mx-0 shadow-lg"
           :class="item.class"
           :href="item.href"
           target="_blank"

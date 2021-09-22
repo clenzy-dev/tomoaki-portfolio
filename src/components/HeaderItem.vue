@@ -2,12 +2,12 @@
   <header
     class="md:px-16 md:pt-8 md:pb-6 md:flex md:justify-between md:items-center"
   >
-    <div class="header-logo md:flex hidden">
+    <router-link id="top" to="/" class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
-    </div>
-    <div class="md:hidden w-full md:static fixed top-2 left-2">
+    </router-link>
+    <router-link id="top" to="/" class="md:hidden w-full md:static fixed top-2 left-2">
       <img class="w-12 mt-4" :src="headerLogoSp" alt="logo-sp" />
-    </div>
+    </router-link>
     <BurgerMenu />
     <nav>
       <div class="space-x-8">
