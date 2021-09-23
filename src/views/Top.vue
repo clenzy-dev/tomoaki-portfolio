@@ -3,12 +3,13 @@
     <HeaderItem />
     <main>
       <div class="relative">
-        <video class="hidden md:block" :src="mainVideo" autoplay muted playsinline></video>
+        <video class="hidden md:block" :src="mainVideo" autoplay muted></video>
         <video
           class="md:hidden pt-20 w-full"
           :src="mainVideoSp"
           autoplay
           muted
+          playsinline
         ></video>
       </div>
       <div class="md:px-24 pl-24 pt-4">
