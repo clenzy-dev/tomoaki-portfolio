@@ -2,7 +2,7 @@
   <div>
     <HeaderItem />
     <main>
-      <div class="relative fade opacity-0">
+      <div class="relative">
         <video class="hidden md:block" :src="mainVideo" autoplay muted></video>
         <video
           class="md:hidden pt-20 w-full"
@@ -12,7 +12,7 @@
           playsinline
         ></video>
       </div>
-      <div class="md:px-24 pl-24 pt-4 fade opacity-0">
+      <div class="md:px-24 pl-24 pt-4">
         <h2
           class="catch md:text-4xl text-2xl text-left md:pt-20 pt-20 md:pb-10 pb-2 md:pr-0 pr-2"
         >
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="md:px-24 pl-20 md:pb-36 pb-20 fade opacity-0">
+      <div class="md:px-24 pl-20 md:pb-36 pb-20">
         <h2
           class="catch md:text-4xl text-2xl text-left md:pt-32 pt-20 md:pb-8 pb-5 md:pr-0 pr-2"
         >
@@ -97,7 +97,6 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
-import $ from "jquery";
 export default {
   data() {
     return {
@@ -158,17 +157,6 @@ export default {
       ],
     };
   },
-  mounted: function() {
-    $(window).on("scroll", function() {
-      var scroll_top = $(window).scrollTop();
-      $(".fade").each(function() {
-        var offset_top = $(this).offset().top - $(this).height();
-        if (scroll_top > offset_top) {
-          $(this).addClass("fadeUp");
-        }
-      });
-    });
-  },
   components: {
     HeaderItem,
     FooterItem,
@@ -205,27 +193,6 @@ export default {
   .catch:before,
   .catch:after {
     display: none;
-  }
-}
-</style>
-
-<style>
-.fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 </style>

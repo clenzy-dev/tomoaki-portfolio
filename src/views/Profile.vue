@@ -1,7 +1,7 @@
 <template>
   <HeaderItem />
   <main class="pl-20 md:pr-0 pr-2">
-    <div class="md:px-28 px-0 md:pb-36 fade opacity-0">
+    <div class="md:px-28 px-0 md:pb-36">
       <h1
         class="md:text-4xl text-2xl text-center md:pt-64 pt-32 md:pb-44 pb-10"
       >
@@ -26,14 +26,14 @@
         </div>
       </div>
     </div>
-    <div class="md:block hidden fade opacity-0">
+    <div class="md:block hidden">
       <img class="mx-auto w-24" src="../assets/img/200-200.png" alt="logo" />
     </div>
-    <div class="md:hidden block fade opacity-0">
+    <div class="md:hidden block">
       <div class="text-3xl md:pt-0 pt-2">Tomoaki Sato</div>
       <div class="text-right">video creator</div>
     </div>
-    <div class="md:px-28 px-0 py-10 fade opacity-0">
+    <div class="md:px-28 px-0 py-10">
       <h3 class="text-2xl pb-5 md:block hidden">CAREER</h3>
       <dl
         v-for="item in careerItems"
@@ -46,13 +46,13 @@
         <dd class="sm:text-xl text-xs w-3/5">{{ item.contents }}</dd>
       </dl>
     </div>
-    <div class="md:px-28 px-0 md:py-10 fade opacity-0">
+    <div class="md:px-28 px-0 md:py-10">
       <h3 class="text-2xl pb-5 md:block hidden">SKILLS</h3>
       <p class="md:text-xl text-sm">
         Adobe Premiere Pro / Adobe Photoshop / Wondershare Filmora 9
       </p>
     </div>
-    <div class="md:pl-28 pl-0 py-10 fade opacity-0">
+    <div class="md:pl-28 pl-0 py-10">
       <h3 class="catch md:text-2xl text-xl md:pb-5 pb-2">RECOMMENDATIONS</h3>
       <div class="md:flex md:flex-wrap">
         <a
@@ -65,7 +65,7 @@
           :key="item.name"
         >
           <div class="w-1/6">
-            <img :class="item.imgclass" :src="item.img" alt="icon" />
+            <img :src="item.img" alt="icon" />
           </div>
           <div class="w-9/12">
             <p class="p-2 md:text-base text-xs">{{ item.name }}</p>
@@ -76,7 +76,7 @@
         </a>
       </div>
     </div>
-    <div class="md:hidden block pb-6 fade opacity-0">
+    <div class="md:hidden block pb-6">
       <h3 class="catch md:text-3xl text-xl pb-5">GREETING</h3>
       <p class="text-xs bg-bgGray p-1">
         感動を、もっと近くに。<br /><br />
@@ -93,7 +93,6 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
-import $ from "jquery";
 export default {
   data() {
     return {
@@ -126,7 +125,6 @@ export default {
           img: require("../assets/img/torusu-sub-icon.png"),
           name: "とおるすアカペラ制作中",
           href: "https://www.youtube.com/channel/UCmcjgVVMtUczKv0VQVlQG5w",
-          imgclass: "w-11/12",
           class: "md:ml-2 ml-0",
         },
         {
@@ -137,17 +135,6 @@ export default {
         },
       ],
     };
-  },
-  mounted: function() {
-    $(window).on("scroll", function() {
-      var scroll_top = $(window).scrollTop();
-      $(".fade").each(function() {
-        var offset_top = $(this).offset().top - $(this).height();
-        if (scroll_top > offset_top) {
-          $(this).addClass("fadeUp");
-        }
-      });
-    });
   },
   components: {
     HeaderItem,

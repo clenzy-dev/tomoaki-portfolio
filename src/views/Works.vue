@@ -1,7 +1,7 @@
 <template>
   <HeaderItem />
   <main>
-    <div class="md:px-32 md:pb-56 pl-20 fade opacity-0">
+    <div class="md:px-32 md:pb-56 pl-20">
       <h2
         class="catch md:text-4xl text-2xl text-center md:pt-40 pt-28 md:pb-20 pb-14"
       >
@@ -46,7 +46,6 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
-import $ from "jquery";
 export default {
   data() {
     return {
@@ -137,22 +136,9 @@ export default {
       ],
     };
   },
-  mounted: function() {
-    $(window).on("scroll", function() {
-      var scroll_top = $(window).scrollTop();
-      $(".fade").each(function() {
-        var offset_top = $(this).offset().top - $(this).height();
-        if (scroll_top > offset_top) {
-          $(this).addClass("fadeUp");
-        }
-      });
-    });
-  },
   components: {
     HeaderItem,
     FooterItem,
   },
 };
 </script>
-
-<style></style>
