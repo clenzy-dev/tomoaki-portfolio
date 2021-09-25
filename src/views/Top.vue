@@ -101,6 +101,7 @@ import FooterItem from "@/components/FooterItem.vue";
 export default {
   data() {
     return {
+      isVisible1: false,
       mainVideo: require("../assets/img/LogoMovieWideScreen01.mp4"),
       mainVideoSp: require("../assets/img/LogoMovieSquare02.mp4"),
       profileImg: require("../assets/img/tomoaki-plofile.jpg"),

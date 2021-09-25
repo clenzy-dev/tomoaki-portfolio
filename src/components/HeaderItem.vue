@@ -5,7 +5,7 @@
     <router-link id="top" to="/" class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </router-link>
-    <router-link id="top" to="/" class="md:hidden w-full md:static fixed top-2 left-2">
+    <router-link id="top" to="/" class="md:hidden w-full md:static fixed top-0 left-2">
       <img class="w-12 mt-4" :src="headerLogoSp" alt="logo-sp" />
     </router-link>
     <BurgerMenu />
