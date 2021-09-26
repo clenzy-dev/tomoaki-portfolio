@@ -99,6 +99,11 @@
       </div>
     </main>
     <FooterItem />
+    <div class="start bg-white fixed top-0 left-0 h-full w-full z-50">
+      <p class="fixed left-1/2 top-1/2 z-50 hidden ">
+        <img src="../assets/img/200-200.png" alt="" />
+      </p>
+    </div>
   </div>
 </template>
 
@@ -115,7 +120,7 @@ export default {
       items: [
         {
           id: 1,
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/MakeYouHappy-Kevin.jpg"),
           href: "https://www.youtube.com/watch?v=siFt7m8S8OY",
           title:
             "【アメリカ人が歌う】Make you happy / NiziU ‐ Feat.ケビン【アカペラ】",
@@ -132,7 +137,7 @@ export default {
         },
         {
           id: 3,
-          img: require("../assets/img/citrus-daice.png"),
+          img: require("../assets/img/citrus-daice.jpg"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
           title:
             "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
@@ -141,7 +146,7 @@ export default {
         },
         {
           id: 4,
-          img: require("../assets/img/PaleBlue-yonezu.png"),
+          img: require("../assets/img/PaleBlue-yonezu.jpg"),
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
           class: "lg:col-span-1 sm:text-base",
@@ -149,7 +154,7 @@ export default {
         },
         {
           id: 5,
-          img: require("../assets/img/MGA-medley.png"),
+          img: require("../assets/img/MGA-medley.jpg"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
           title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN ...",
           class: "lg:col-span-1 sm:text-base",
@@ -157,7 +162,7 @@ export default {
         },
         {
           id: 6,
-          img: require("../assets/img/Kevin-english-16-9.png"),
+          img: require("../assets/img/Kevin-english-16-9.jpg"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
           title: "【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
@@ -166,8 +171,14 @@ export default {
       ],
     };
   },
-  
+
   mounted: function() {
+    setTimeout(function() {
+      $(".start p").fadeIn(2000);
+    }, 500);
+    setTimeout(function() {
+      $(".start").fadeOut(800);
+    }, 2500);
     $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();
@@ -220,6 +231,9 @@ export default {
 }
 .catch:after {
   margin-left: 0.2em;
+}
+.start p {
+  transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
   .catch:before,
