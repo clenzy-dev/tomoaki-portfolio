@@ -2,12 +2,16 @@
   <HeaderItem />
   <main>
     <div class="md:px-32 md:pb-56 pl-20">
-      <h2 class="catch text-4xl text-center pt-40 pb-20">WORKS</h2>
-      <div class="">
+      <h2
+        class="catch md:text-4xl text-2xl text-center md:pt-40 pt-28 md:pb-20 pb-14 fade opacity-0"
+      >
+        WORKS
+      </h2>
+      <div class="fade opacity-0">
         <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
           <div
             :class="item.class"
-            class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2"
+            class="transition duration-250 ease-in-out hover:opacity-40 bg-bgGray col-span-2 shadow-xl"
             v-for="item in items"
             :key="item.id"
           >
@@ -16,7 +20,7 @@
                 <img class="" :src="item.img" :alt="item.id" />
               </div>
               <div class="p-1 m-1 relative">
-                <div class="w-2/3">
+                <div class="md:w-9/12 w-10/12">
                   <p class="lg:text-xl sm:text-base text-xs">
                     {{ item.title }}
                   </p>
@@ -42,17 +46,18 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
+import $ from "jquery";
 export default {
   data() {
     return {
       items: [
         {
           id: 1,
-          img: require("../assets/img/MakeYouHappy-Kevin.png"),
+          img: require("../assets/img/MakeYouHappy-Kevin.jpg"),
           href: "https://www.youtube.com/watch?v=siFt7m8S8OY",
           title:
             "【アメリカ人が歌う】Make you happy / NiziU ‐ Feat.ケビン【アカペラ】",
-          class: "",
+          class: "sm:text-base",
           logoclass: "lg:w-12 md:w-9",
         },
         {
@@ -60,38 +65,39 @@ export default {
           img: require("../assets/img/tentaikansoku3.png"),
           href: "",
           title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
-          class: "",
+          class: "sm:text-base",
           logoclass: "lg:w-12 md:w-9",
         },
         {
           id: 3,
-          img: require("../assets/img/citrus-daice.png"),
+          img: require("../assets/img/citrus-daice.jpg"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
-          title: "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
-          class: "lg:col-span-1",
+          title:
+            "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
+          class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
         {
           id: 4,
-          img: require("../assets/img/PaleBlue-yonezu.png"),
+          img: require("../assets/img/PaleBlue-yonezu.jpg"),
           href: "https://www.youtube.com/watch?v=rCrlCyQizEM",
           title: "【女性が歌う】Pale Blue / 米津玄師【アカペラ】",
-          class: "lg:col-span-1",
-          logoclass: "",
+          class: "lg:col-span-1 sm:text-base",
+          logoclass: "top-2",
         },
         {
           id: 5,
-          img: require("../assets/img/MGA-medley.png"),
+          img: require("../assets/img/MGA-medley.jpg"),
           href: "https://www.youtube.com/watch?v=jgDJv06fgnU",
-          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN...",
-          class: "lg:col-span-1",
+          title: "【ハモネプ出場者が歌う】インフェルノから始まるMrs. GREEN ...",
+          class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
         {
           id: 6,
-          img: require("../assets/img/Kevin-english-16-9.png"),
+          img: require("../assets/img/Kevin-english-16-9.jpg"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title: "【英語歌ったら即終了】Make you happy - NiziU【アカ...",
+          title: "【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
@@ -131,11 +137,21 @@ export default {
       ],
     };
   },
+  mounted: function() {
+    $(function() {
+      const wHeight = $(window).height();
+      const scrollAmount = $(window).scrollTop();
+      $(".fade").each(function() {
+        const targetPosition = $(this).offset().top;
+        if (scrollAmount > targetPosition - wHeight) {
+          $(this).addClass("fadeUp");
+        }
+      });
+    });
+  },
   components: {
     HeaderItem,
     FooterItem,
   },
 };
 </script>
-
-<style></style>
