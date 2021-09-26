@@ -130,7 +130,7 @@ export default {
         {
           id: 2,
           img: require("../assets/img/tentaikansoku3.png"),
-          href: "",
+          href: "https://www.youtube.com/watch?v=j99P45Egu88",
           title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
           class: "sm:text-base",
           logoclass: "lg:w-12 md:w-9",
