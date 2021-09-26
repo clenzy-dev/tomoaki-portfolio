@@ -3,7 +3,7 @@
   <main>
     <div class="md:px-32 md:pb-56 pl-20">
       <h2
-        class="catch md:text-4xl text-2xl text-center md:pt-40 pt-28 md:pb-20 pb-14"
+        class="catch md:text-4xl text-2xl text-center md:pt-40 pt-28 md:pb-20 pb-14 fade opacity-0"
       >
         WORKS
       </h2>
@@ -138,12 +138,12 @@ export default {
     };
   },
   mounted: function() {
-    $(window).on("load", function() {
+    $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();
       $(".fade").each(function() {
         const targetPosition = $(this).offset().top;
-        if (scrollAmount > targetPosition - wHeight + 0) {
+        if (scrollAmount > targetPosition - wHeight) {
           $(this).addClass("fadeUp");
         }
       });
