@@ -140,7 +140,7 @@ export default {
           img: require("../assets/img/citrus-daice.jpg"),
           href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
           title:
-            "【コラボ】CITRUS / Da-iCEハイスクール・バンバンの女性陣とアカペラ】",
+            "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
