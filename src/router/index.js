@@ -21,11 +21,17 @@ const routes = [
   },
 ];
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    return { top: 0 }
+  }
+};
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    return { x: 0, y: 0 };
-  },
+  scrollBehavior
 });
 export default router;

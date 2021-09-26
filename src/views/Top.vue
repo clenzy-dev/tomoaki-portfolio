@@ -12,7 +12,7 @@
           disablePictureInPicture
         ></video>
         <video
-          class="md:hidden pt-20 w-full"
+          class="md:hidden mt-20 w-full"
           :src="mainVideoSp"
           autoplay
           muted
@@ -166,6 +166,7 @@ export default {
       ],
     };
   },
+  
   mounted: function() {
     $(function() {
       const wHeight = $(window).height();
@@ -182,7 +183,7 @@ export default {
       const scrollAmount = $(window).scrollTop();
       $(".fade").each(function() {
         const targetPosition = $(this).offset().top;
-        if (scrollAmount > targetPosition - wHeight + 400) {
+        if (scrollAmount > targetPosition - wHeight + 300) {
           $(this).addClass("fadeUp");
         }
       });
