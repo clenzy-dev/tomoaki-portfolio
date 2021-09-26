@@ -7,7 +7,7 @@
       >
         WORKS
       </h2>
-      <div class="">
+      <div class="fade opacity-0">
         <div class="md:grid md:grid-cols-4 md:grid-lows-2 gap-2 md:pr-0 pr-2">
           <div
             :class="item.class"
@@ -46,6 +46,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
+import $ from "jquery";
 export default {
   data() {
     return {
@@ -135,6 +136,18 @@ export default {
         },
       ],
     };
+  },
+  mounted: function() {
+    $(window).on("load", function() {
+      const wHeight = $(window).height();
+      const scrollAmount = $(window).scrollTop();
+      $(".fade").each(function() {
+        const targetPosition = $(this).offset().top;
+        if (scrollAmount > targetPosition - wHeight + 0) {
+          $(this).addClass("fadeUp");
+        }
+      });
+    });
   },
   components: {
     HeaderItem,

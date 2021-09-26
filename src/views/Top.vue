@@ -2,12 +2,13 @@
   <div>
     <HeaderItem />
     <main>
-      <div class="relative">
+      <div class="relative fadeLoad opacity-0">
         <video
           class="hidden md:block"
           :src="mainVideo"
           autoplay
           muted
+          playsinline
           disablePictureInPicture
         ></video>
         <video
@@ -19,7 +20,7 @@
           disablePictureInPicture
         ></video>
       </div>
-      <div class="md:px-24 pl-24 pt-4">
+      <div class="md:px-24 pl-24 pt-4 fade opacity-0">
         <h2
           class="catch md:text-4xl text-2xl text-left md:pt-20 pt-20 md:pb-10 pb-2 md:pr-0 pr-2"
         >
@@ -68,9 +69,9 @@
           </div>
         </div>
       </div>
-      <div class="md:px-24 pl-20 md:pb-36 pb-20">
+      <div class="md:px-24 pl-20 md:pb-36 pb-20 fade opacity-0">
         <h2
-          class="catch md:text-4xl text-2xl text-left md:pt-32 pt-20 md:pb-8 pb-5 md:pr-0 pr-2"
+          class="catch md:text-4xl text-2xl text-left md:mt-48 mt-32 md:pb-8 pb-5 md:pr-0 pr-2"
         >
           PROFILE
         </h2>
@@ -104,6 +105,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
+import $ from "jquery";
 export default {
   data() {
     return {
@@ -164,6 +166,28 @@ export default {
       ],
     };
   },
+  mounted: function() {
+    $(function() {
+      const wHeight = $(window).height();
+      const scrollAmount = $(window).scrollTop();
+      $(".fadeLoad").each(function() {
+        const targetPosition = $(this).offset().top;
+        if (scrollAmount > targetPosition - wHeight) {
+          $(this).addClass("fadeUp");
+        }
+      });
+    });
+    $(window).on("scroll", function() {
+      const wHeight = $(window).height();
+      const scrollAmount = $(window).scrollTop();
+      $(".fade").each(function() {
+        const targetPosition = $(this).offset().top;
+        if (scrollAmount > targetPosition - wHeight + 400) {
+          $(this).addClass("fadeUp");
+        }
+      });
+    });
+  },
   components: {
     HeaderItem,
     FooterItem,
@@ -200,6 +224,25 @@ export default {
   .catch:before,
   .catch:after {
     display: none;
+  }
+}
+</style>
+
+<style>
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
