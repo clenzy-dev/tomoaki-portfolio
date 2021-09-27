@@ -8,7 +8,7 @@
     <router-link
       id="top"
       to="/"
-      class="md:hidden w-full md:static fixed top-0 left-2"
+      class="md:hidden w-full md:static fixed top-0 left-2 z-10"
     >
       <img class="w-12 mt-4" :src="headerLogoSp" alt="logo-sp" />
     </router-link>

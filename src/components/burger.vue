@@ -25,7 +25,7 @@
       :class="{ 'is-active': open }"
     >
       <div
-        class="flex flex-col bg-white w-full h-screen pt-40 text-3xl space-y-10 text-center"
+        class="fixed top-0 left-0 flex flex-col bg-white w-full h-full text-3xl space-y-10 text-center pt-40 z-50"
       >
         <router-link id="top" to="/">
           <span>TOP</span>
