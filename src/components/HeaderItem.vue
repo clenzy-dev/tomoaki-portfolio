@@ -7,7 +7,6 @@
     </router-link>
     <router-link id="top" to="/">
       <img
-        id="headerLogo"
         class="w-12 mt-4 md:hidden md:static fixed top-0 left-2 z-10"
         :src="headerLogoSp"
         alt="logo-sp"
@@ -45,10 +44,10 @@ export default {
       headerLogoSp: require("../assets/img/200-200.png"),
     };
   },
-  mounted: function() {
-    $("#headerLogo").click(function(){
-      $(".start p").fadeIn(2000);
-      $(".start").fadeOut(800);
+  methods: function() {
+    $("router-link").click(function() {
+      console.log("active")
+      
     });
   },
   components: {
