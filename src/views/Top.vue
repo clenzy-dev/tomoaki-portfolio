@@ -164,7 +164,8 @@ export default {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.jpg"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title: "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
+          title:
+            "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
