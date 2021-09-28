@@ -46,8 +46,7 @@ export default {
   },
   methods: function() {
     $("router-link").click(function() {
-      console.log("active")
-      
+      console.log("active");
     });
   },
   components: {
