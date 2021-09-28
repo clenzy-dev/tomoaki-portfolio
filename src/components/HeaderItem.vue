@@ -5,12 +5,12 @@
     <router-link id="top" to="/" class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </router-link>
-    <router-link
-      id="top"
-      to="/"
-      class="md:hidden w-full md:static fixed top-0 left-2"
-    >
-      <img class="w-12 mt-4" :src="headerLogoSp" alt="logo-sp" />
+    <router-link id="top" to="/">
+      <img
+        class="w-12 mt-4 md:hidden md:static fixed top-0 left-2 z-10"
+        :src="headerLogoSp"
+        alt="logo-sp"
+      />
     </router-link>
     <BurgerMenu />
     <nav>
@@ -36,12 +36,18 @@
 
 <script>
 import BurgerMenu from "./burger.vue";
+import $ from "jquery";
 export default {
   data() {
     return {
       headerLogo: require("../assets/img/tomoaki-logo-side.png"),
       headerLogoSp: require("../assets/img/200-200.png"),
     };
+  },
+  methods: function() {
+    $("router-link").click(function() {
+      console.log("active");
+    });
   },
   components: {
     BurgerMenu,
