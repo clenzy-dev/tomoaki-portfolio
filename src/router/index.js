@@ -9,13 +9,14 @@ const routes = [
     path: "/",
     name: "Top",
     component: Top,
-    beforeEnter: function() {
+    beforeEnter: function(to,from,next) {
       setTimeout(function() {
         $(".start p").fadeIn(2000);
       }, 500);
       setTimeout(function() {
         $(".start").fadeOut(800);
       }, 2500);
+      next(); 
     },
   },
   {
