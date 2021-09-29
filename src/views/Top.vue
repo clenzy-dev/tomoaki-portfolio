@@ -1,5 +1,10 @@
 <template>
   <div>
+  <div class="start bg-white fixed top-0 left-0 h-full w-full z-50">
+      <p class="fixed left-1/2 top-1/2 z-50 hidden w-20">
+        <img src="../assets/img/200-200.png" alt="" />
+      </p>
+    </div>
     <HeaderItem />
     <main>
       <div class="relative fadeLoad opacity-0">
@@ -99,11 +104,6 @@
       </div>
     </main>
     <FooterItem />
-    <div class="start bg-white fixed top-0 left-0 h-full w-full z-50">
-      <p class="fixed left-1/2 top-1/2 z-50 hidden w-20">
-        <img src="../assets/img/200-200.png" alt="" />
-      </p>
-    </div>
   </div>
 </template>
 

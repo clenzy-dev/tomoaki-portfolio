@@ -48,8 +48,8 @@ export default {
     logoClick: function() {
       $(".headerLogoSp").on("click", function() {
         $(".start")
-          .fadeIn(2000)
-          .fadeOut(800);
+          .fadeIn(800)
+          .fadeOut(2000);
       });
     },
   },
