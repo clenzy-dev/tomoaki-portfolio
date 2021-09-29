@@ -173,6 +173,12 @@ export default {
     };
   },
   mounted: function() {
+    setTimeout(function() {
+      $(".start p").fadeIn(2000);
+    }, 500);
+    setTimeout(function() {
+      $(".start").fadeOut(800);
+    }, 2500);
     $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();

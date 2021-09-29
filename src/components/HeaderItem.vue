@@ -5,9 +5,9 @@
     <router-link id="top" to="/" class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </router-link>
-    <router-link id="top" to="/">
+    <router-link id="top" to="/" v-on:click="logoClick">
       <img
-        class="w-12 mt-4 md:hidden md:static fixed top-0 left-2 z-10"
+        class="headerLogoSp w-12 mt-4 md:hidden md:static fixed top-0 left-2 z-10"
         :src="headerLogoSp"
         alt="logo-sp"
       />
@@ -44,11 +44,14 @@ export default {
       headerLogoSp: require("../assets/img/200-200.png"),
     };
   },
-  methods: function() {
-    $("router-link").click(function() {
-      console.log("active")
-      
-    });
+  methods: {
+    logoClick: function() {
+      $(".headerLogoSp").on("click", function() {
+        $(".start")
+          .fadeIn(2000)
+          .fadeOut(800);
+      });
+    },
   },
   components: {
     BurgerMenu,
