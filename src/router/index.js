@@ -16,6 +16,15 @@ const routes = [
       setTimeout(function() {
         $(".start").fadeOut(800);
       }, 2500);
+      $(function() {
+        var loader = $(".loader-wrap");
+        $(window).on("load", function() {
+          loader.fadeOut();
+        });
+        setTimeout(function() {
+          loader.fadeOut();
+        }, 3000);
+      });
       next();
     },
   },

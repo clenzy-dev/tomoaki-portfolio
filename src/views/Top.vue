@@ -179,15 +179,6 @@ export default {
   },
   mounted: function() {
     $(function() {
-      var loader = $(".loader-wrap");
-      $(window).on("load", function() {
-        loader.fadeOut();
-      });
-      setTimeout(function() {
-        loader.fadeOut();
-      }, 3000);
-    });
-    $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();
       $(".fadeLoad").each(function() {
