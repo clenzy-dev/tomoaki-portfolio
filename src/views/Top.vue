@@ -2,9 +2,9 @@
   <div>
     <HeaderItem />
     <main>
-      <div class="relative fadeLoad opacity-0">
+      <div class="relative">
         <div
-          class="loader-wrap fixed flex items-center justify-center w-full h-full bg-white"
+          class="loader-wrap absolute flex items-center justify-center w-full h-full bg-white"
         >
           <div class="loader">Loading...</div>
         </div>

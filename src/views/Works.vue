@@ -46,7 +46,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
-import $ from "jquery";
+import FadeUp from "../hooks/FadeUp.js";
 export default {
   data() {
     return {
@@ -97,7 +97,8 @@ export default {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.jpg"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title: "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
+          title:
+            "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
@@ -137,18 +138,7 @@ export default {
       ],
     };
   },
-  mounted: function() {
-    $(function() {
-      const wHeight = $(window).height();
-      const scrollAmount = $(window).scrollTop();
-      $(".fade").each(function() {
-        const targetPosition = $(this).offset().top;
-        if (scrollAmount > targetPosition - wHeight) {
-          $(this).addClass("fadeUp");
-        }
-      });
-    });
-  },
+  mounted: FadeUp(),
   components: {
     HeaderItem,
     FooterItem,

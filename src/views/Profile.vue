@@ -91,6 +91,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
+import ScrollFadeUp from "../hooks/ScrollFadeUp.js";
 import $ from "jquery";
 export default {
   data() {
@@ -146,16 +147,7 @@ export default {
         }
       });
     });
-    $(window).on("scroll", function() {
-      const wHeight = $(window).height();
-      const scrollAmount = $(window).scrollTop();
-      $(".fade").each(function() {
-        const targetPosition = $(this).offset().top;
-        if (scrollAmount > targetPosition - wHeight + 400) {
-          $(this).addClass("fadeUp");
-        }
-      });
-    });
+    ScrollFadeUp()
   },
   components: {
     HeaderItem,
