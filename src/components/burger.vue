@@ -29,12 +29,12 @@
       >
         <router-link id="top" to="/">
           <span>TOP</span>
+          <hr width="10%" noshade="" class="mx-auto my-8" />
         </router-link>
-        <div class="w-1/12 border-t text-center mx-auto pt-10"></div>
         <router-link id="works" to="/works">
           <span>WORKS</span>
+          <hr width="10%" noshade="" class="mx-auto my-8" />
         </router-link>
-        <div class="w-1/12 border-t text-center mx-auto pt-10"></div>
         <router-link id="profile" to="/profile">
           <span>PROFILE</span>
         </router-link>
