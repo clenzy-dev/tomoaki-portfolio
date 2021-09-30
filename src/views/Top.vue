@@ -117,6 +117,7 @@ import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
 import ScrollFadeUp from "../hooks/ScrollFadeUp.js";
 import FirstLoading from "../hooks/FirstLoading.js";
+import MovieLoading from "../hooks/movieLoading.js";
 export default {
   data() {
     return {
@@ -182,6 +183,7 @@ export default {
   mounted() {
     console.log("fuck");
     FirstLoading();
+    MovieLoading();
     ScrollFadeUp();
   },
   components: {
