@@ -17,10 +17,6 @@ const routes = [
         $(".start").fadeOut(800);
       }, 2500);
       $(function() {
-        var style = '<link rel="stylesheet" href="@/assets/animation.css">';
-        $("head link:last").after(style);
-      });
-      $(function() {
         var loader = $(".loader-wrap");
         $(window).on("load", function() {
           loader.fadeOut();
