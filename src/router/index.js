@@ -9,7 +9,7 @@ const routes = [
     path: "/",
     name: "Top",
     component: Top,
-    beforeEnter: (to, from, next) => {
+    beforeRouteEnter: (to, from, next) => {
       setTimeout(function() {
         $(".start p").fadeIn(2000);
       }, 500);
@@ -32,7 +32,7 @@ const routes = [
     path: "/works",
     name: "works",
     component: Works,
-    beforeEnter: (to, from, next) => {
+    beforeRouteEnter: (to, from, next) => {
       setTimeout(function() {
         $(".start p").fadeIn(2000);
       }, 500);
@@ -55,7 +55,7 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile,
-    beforeEnter: (to, from, next) => {
+    beforeRouteEnter: (to, from, next) => {
       setTimeout(function() {
         $(".start p").fadeIn(2000);
       }, 500);
