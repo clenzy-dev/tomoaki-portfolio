@@ -92,6 +92,7 @@
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
 import ScrollFadeUp from "../hooks/ScrollFadeUp.js";
+import FirstLoading from "../hooks/FirstLoading.js";
 import $ from "jquery";
 export default {
   data() {
@@ -137,6 +138,7 @@ export default {
     };
   },
   mounted: function() {
+    FirstLoading();
     $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();
