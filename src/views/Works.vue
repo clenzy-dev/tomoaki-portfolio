@@ -46,7 +46,7 @@
 <script>
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
-import FadeUp from "../hooks/FadeUp.js";
+import ScrollFadeUp from "../hooks/ScrollFadeUp.js";
 export default {
   data() {
     return {
@@ -138,7 +138,7 @@ export default {
       ],
     };
   },
-  mounted: FadeUp(),
+  mounted: ScrollFadeUp(),
   components: {
     HeaderItem,
     FooterItem,
