@@ -137,8 +137,10 @@ export default {
       ],
     };
   },
-  mounted: function() {
+  beforeCreate() {
     FirstLoading();
+  },
+  mounted: function() {
     $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();

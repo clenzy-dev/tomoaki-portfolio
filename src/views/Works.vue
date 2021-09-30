@@ -139,8 +139,10 @@ export default {
       ],
     };
   },
-  mounted() {
+  beforeCreate() {
     FirstLoading();
+  },
+  mounted() {
     ScrollFadeUp();
   },
   components: {
