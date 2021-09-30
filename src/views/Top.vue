@@ -178,10 +178,10 @@ export default {
       ],
     };
   },
-  beforeCreate() {
-    FirstLoading();
-  },
+  
   mounted() {
+    console.log("fuck");
+    FirstLoading();
     ScrollFadeUp();
   },
   components: {

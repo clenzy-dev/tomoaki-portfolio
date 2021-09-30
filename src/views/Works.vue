@@ -47,7 +47,6 @@
 import HeaderItem from "@/components/HeaderItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
 import ScrollFadeUp from "../hooks/ScrollFadeUp.js";
-import FirstLoading from "../hooks/FirstLoading.js";
 export default {
   data() {
     return {
@@ -139,10 +138,9 @@ export default {
       ],
     };
   },
-  beforeCreate() {
-    FirstLoading();
-  },
+  
   mounted() {
+    console.log("fuck");
     ScrollFadeUp();
   },
   components: {

@@ -16,6 +16,7 @@ const FirstLoading = () => {
       loader.fadeOut();
     }, 3000);
   });
+  console.log("fuck");
 };
 
 export default FirstLoading;

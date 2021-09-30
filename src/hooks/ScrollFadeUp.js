@@ -11,6 +11,7 @@ const ScrollFadeUp = () => {
       }
     });
   });
+  console.log("fuck");
 };
 
 export default ScrollFadeUp;
