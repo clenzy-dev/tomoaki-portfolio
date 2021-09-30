@@ -5,7 +5,7 @@
     <router-link id="top" to="/" class="header-logo md:flex hidden">
       <img class="w-36" :src="headerLogo" alt="logo" />
     </router-link>
-    <router-link id="top" to="/" v-on:click="logoClick">
+    <router-link id="top" to="/">
       <img
         class="headerLogoSp w-12 mt-4 md:hidden md:static fixed top-0 left-2 z-10"
         :src="headerLogoSp"
@@ -36,22 +36,12 @@
 
 <script>
 import BurgerMenu from "./burger.vue";
-import $ from "jquery";
 export default {
   data() {
     return {
       headerLogo: require("../assets/img/tomoaki-logo-side.png"),
       headerLogoSp: require("../assets/img/200-200.png"),
     };
-  },
-  methods: {
-    logoClick: function() {
-      $(".headerLogoSp").on("click", function() {
-        $(".start")
-          .fadeIn(800)
-          .fadeOut(2000);
-      });
-    },
   },
   components: {
     BurgerMenu,

@@ -1,13 +1,13 @@
 <template>
   <div>
-  <div class="start bg-white fixed top-0 left-0 h-full w-full z-50">
-      <p class="fixed left-1/2 top-1/2 z-50 hidden w-20">
-        <img src="../assets/img/200-200.png" alt="" />
-      </p>
-    </div>
     <HeaderItem />
     <main>
       <div class="relative fadeLoad opacity-0">
+        <div
+          class="loader-wrap fixed flex items-center justify-center w-full h-full bg-white"
+        >
+          <div class="loader">Loading...</div>
+        </div>
         <video
           class="hidden md:block"
           :src="mainVideo"
@@ -104,6 +104,11 @@
       </div>
     </main>
     <FooterItem />
+    <div class="start bg-white fixed top-0 left-0 h-full w-full z-50">
+      <p class="fixed left-1/2 top-1/2 z-50 hidden w-20">
+        <img src="../assets/img/200-200.png" alt="" />
+      </p>
+    </div>
   </div>
 </template>
 
@@ -173,12 +178,15 @@ export default {
     };
   },
   mounted: function() {
-    setTimeout(function() {
-      $(".start p").fadeIn(2000);
-    }, 500);
-    setTimeout(function() {
-      $(".start").fadeOut(800);
-    }, 2500);
+    $(function() {
+      var loader = $(".loader-wrap");
+      $(window).on("load", function() {
+        loader.fadeOut();
+      });
+      setTimeout(function() {
+        loader.fadeOut();
+      }, 3000);
+    });
     $(function() {
       const wHeight = $(window).height();
       const scrollAmount = $(window).scrollTop();
@@ -235,6 +243,67 @@ export default {
 .start p {
   transform: translate(-50%, -50%);
 }
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #000000;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #000000;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .catch:before,
   .catch:after {
