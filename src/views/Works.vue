@@ -62,18 +62,18 @@ export default {
         },
         {
           id: 2,
-          img: require("../assets/img/tentaikansoku3.png"),
-          href: "https://www.youtube.com/watch?v=j99P45Egu88",
-          title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
+          img: require("../assets/img/citrus-daice.jpg"),
+          href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
+          title:
+            "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
           class: "sm:text-base",
           logoclass: "lg:w-12 md:w-9",
         },
         {
           id: 3,
-          img: require("../assets/img/citrus-daice.jpg"),
-          href: "https://www.youtube.com/watch?v=ojLVyEszPpM",
-          title:
-            "【コラボ】CITRUS / Da-iCE【ハイスクール・バンバンの女性陣とアカペラ】",
+          img: require("../assets/img/tentaikansoku3.png"),
+          href: "https://www.youtube.com/watch?v=j99P45Egu88",
+          title: "【男性が歌う】 天体観測／BUMP OF CHICKEN【アカペラ】",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
@@ -97,7 +97,8 @@ export default {
           id: 6,
           img: require("../assets/img/Kevin-english-16-9.jpg"),
           href: "https://www.youtube.com/watch?v=yvFQfudHAdU",
-          title: "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
+          title:
+            "#Shorts【英語歌ったら即終了】Make you happy - NiziU【アカペラ】...",
           class: "lg:col-span-1 sm:text-base",
           logoclass: "",
         },
