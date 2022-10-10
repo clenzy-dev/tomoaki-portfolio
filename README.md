@@ -1,4 +1,4 @@
-# tomoaki-sato-portfoliosite
+# tomoaki-sato-portfoliosite（開発用）
 
 ## ステージング環境
 
